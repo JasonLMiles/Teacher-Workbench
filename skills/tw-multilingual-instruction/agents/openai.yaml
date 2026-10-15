@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-multilingual-instruction"
+  short_description: "Plan language supports and California ELD"
+  default_prompt: "Use $tw-multilingual-instruction to add content-linked language objectives, interaction scaffolds, and checks for understanding to this lesson."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

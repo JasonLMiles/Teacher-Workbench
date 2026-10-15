@@ -1,0 +1,12 @@
+# Evidence before ratings
+This is an original operational review system for Teacher Workbench artifacts. It borrows the general practice of explicit shared and subject-specific criteria from the publicly documented [Anthropic K–12 evaluation approach](https://github.com/anthropics/k12-teacher-skills/blob/main/evals/README.md); no proprietary or third-party rubric text is copied. The criteria are author-defined checks, not empirical evidence that a resource improves learning or a validated teacher evaluation scale.
+
+Use `assets/rubrics.json`. Always include `common`, then all applicable subjects (`math`, `ela`, `science`, `humanities`) and workflow sets (`formative`, `rehearsal`, `intervention`, `grading`). Add `access_language` when adaptations or language supports are included or required. For other subjects, add explicit target-specific criteria with unique IDs before reviewing; do not pretend these four sets cover all disciplines.
+
+Record every selected criterion in a ratings file following `assets/review-example.json`. Each pass/fail requires an artifact locator and reasoning; `not_applicable` requires a justified reason and is rejected for universally required common checks. `insufficient_evidence` preserves missing sources or unreadable content. Omitted ratings become `unreviewed`. Ratings are judgments supplied by the reviewer, not detected by the script.
+```
+python3 scripts/review_report.py ratings.json --out review-report.json
+```
+Keep blocker failures and missing evidence visible. The summary reports review coverage and counts, not a single achievement score. A complete pass means only that the selected checks passed on the inspected artifact. Preserve ratings and inspect changed items when revising. Have educators calibrate criteria against actual materials before high-stakes or provider comparisons; document rater disagreement and task selection rather than claiming general superiority from a few cases.
+
+Primary foundations: [California standards](https://www2.cde.ca.gov/cacs/) and [curriculum frameworks](https://www.cde.ca.gov/ci/cr/cf/allfwks.asp) for target/demand; [WWC instructional data-use guide](https://ies.ed.gov/ncee/wwc/PracticeGuide/12) for a response-to-evidence cycle (recommendation 1: Minimal Evidence); [CAST UDL](https://udlguidelines.cast.org/) for examining barriers; subject-specific source text and research opened during the review. Cite actual pages/claims, not this list as blanket validation. Use the shared policy for current AI research, ISTE, CSTP and governing legal issues when relevant.

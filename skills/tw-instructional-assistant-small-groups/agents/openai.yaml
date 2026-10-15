@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-instructional-assistant-small-groups"
+  short_description: "Create ready-to-run groups for instructional assistants"
+  default_prompt: "Use $tw-instructional-assistant-small-groups to create a small-group activity matched to my instructional assistant’s experience, with scripts, scaffolds, keys, and a teacher handback."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

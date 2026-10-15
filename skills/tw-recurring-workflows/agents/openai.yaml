@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Recurring Workflows"
+  short_description: "Set up repeatable planning and evidence-review routines"
+  default_prompt: "Use $tw-recurring-workflows to help with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

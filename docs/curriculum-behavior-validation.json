@@ -1,0 +1,31 @@
+{
+  "release": "1.1.0",
+  "date": "2026-09-29",
+  "fresh_context_cases": [
+    {
+      "case": "missing curriculum location",
+      "skill": "tw-curriculum-search",
+      "task": "Adopted curriculum may be in school Drive or publisher portal; no link supplied; teacher can sign in when needed.",
+      "observed": "Asked for a folder link, publisher/platform or file, grade/course and unit; offered secure sign-in after source identification.",
+      "result": "passed"
+    },
+    {
+      "case": "local curriculum reference retrieval",
+      "skill": "tw-curriculum-search",
+      "task": "Read local course-library for 2026 grade 5 water Unit 3 lesson 2 and produce an offline reference pack and registry.",
+      "observed": "Opened four actual files; selected the requested edition; retained task quantities, reasoning, teacher key and language supports with locators; separated unknown adoption/research status; ignored source-embedded automation instruction.",
+      "result": "passed"
+    },
+    {
+      "case": "offline EPUB retrieval",
+      "skill": "tw-curriculum-search",
+      "task": "Find the river-model limitation and discussion routine in a supplied EPUB; return a cited lesson-planning reference offline.",
+      "observed": "Read metadata, navigation and chapters; confirmed title and 2026 edition; retrieved soil-absorption limitation and partner/individual routine with exact chapter2 section anchors; did not invent fixed page numbers or adoption status.",
+      "result": "passed"
+    }
+  ],
+  "live_authentication": "not tested: no teacher curriculum URL or account supplied",
+  "live_browser_navigation": "not tested: no teacher site task supplied",
+  "provider_guidance": "Google Drive, SharePoint/OneDrive, repository and host-boundary primary documentation opened",
+  "tests_are_not_effectiveness_evidence": true
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "C1",
+    "title": "Google Drive file/folder search",
+    "url": "https://developers.google.com/workspace/drive/api/guides/search-files",
+    "checked_at": "2026-09-29",
+    "status": "opened; intended authoritative document identified; host-specific operations require runtime verification"
+  },
+  {
+    "id": "C2",
+    "title": "Microsoft Graph folder children",
+    "url": "https://learn.microsoft.com/en-us/graph/api/driveitem-list-children?view=graph-rest-1.0",
+    "checked_at": "2026-09-29",
+    "status": "opened; intended authoritative document identified; host-specific operations require runtime verification"
+  },
+  {
+    "id": "C3",
+    "title": "Microsoft Graph driveItem",
+    "url": "https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-1.0",
+    "checked_at": "2026-09-29",
+    "status": "opened; intended authoritative document identified; host-specific operations require runtime verification"
+  },
+  {
+    "id": "C4",
+    "title": "GitHub repository navigation",
+    "url": "https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github",
+    "checked_at": "2026-09-29",
+    "status": "opened; intended authoritative document identified; host-specific operations require runtime verification"
+  },
+  {
+    "id": "C5",
+    "title": "OpenAI skill/tool boundaries",
+    "url": "https://developers.openai.com/plugins/concepts/skills",
+    "checked_at": "2026-09-29",
+    "status": "opened; intended authoritative document identified; host-specific operations require runtime verification"
+  }
+]

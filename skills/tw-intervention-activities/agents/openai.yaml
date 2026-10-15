@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-intervention-activities"
+  short_description: "Build targeted activities for Tiers 1, 2 and 3"
+  default_prompt: "Use $tw-intervention-activities. Create Tier 1, Tier 2 and Tier 3 activity options for this identified learning need, with actual tasks, keys and progress checks."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,48 @@
+{
+  "release": "1.5.0",
+  "date": "2026-09-29",
+  "review_status": "passed_for_scoped_cases",
+  "helper_tests": 20,
+  "helper_test_result": "passed",
+  "cases": [
+    {
+      "name": "Quick check and lesson rehearsal",
+      "skills": [
+        "tw-formative-checks",
+        "tw-lesson-rehearsal"
+      ],
+      "artifact": "tests/v15/quick-check-response.md",
+      "observed": "Complete two-item check, correct keys and follow-up, access supports, current source notes; interactive pause followed by feedback on an actual supplied teacher attempt and a retry.",
+      "limit": "Synthetic lesson and simulated student; no classroom outcomes."
+    },
+    {
+      "name": "Local references and workflow draft",
+      "skills": [
+        "tw-learning-commons",
+        "tw-recurring-workflows"
+      ],
+      "artifact": "tests/v15/connections-case/result.md",
+      "observed": "Resolved same-code records by jurisdiction; preserved synthetic status and unknown prerequisite coverage; produced four-occurrence Friday schedule draft with correct zone/UTC dates and explicit no-activation status.",
+      "limit": "Local synthetic records only; no live plugin, authenticated REST or scheduler activation."
+    },
+    {
+      "name": "Pedagogical review and correction",
+      "skills": [
+        "tw-pedagogical-review"
+      ],
+      "artifact": "tests/v15/review-case/review-summary.md",
+      "observed": "Detected incorrect key, invalid diagnosis/placement/mastery, support and missing-data issues; rated 16 criteria; 11 original blockers and none on revised reinspection. Corrected 15-square-unit area and separate 16-unit perimeter; report script executed on both versions.",
+      "limit": "Model-authored ratings and same-reviewer reinspection; no independent educator calibration."
+    }
+  ],
+  "guide": {
+    "pages": 25,
+    "formats": [
+      "md",
+      "docx",
+      "pdf"
+    ],
+    "all_pages_visually_reviewed": true,
+    "directory_skills": 45
+  }
+}

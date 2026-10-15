@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Item Response Theory"
+  short_description: "Evaluate IRT models, data, and measurement"
+  default_prompt: "Use $tw-item-response-theory to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

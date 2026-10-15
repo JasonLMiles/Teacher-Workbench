@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-grade-calculations"
+  short_description: "Audit grade formulas, weights and policy scenarios"
+  default_prompt: "Use $tw-grade-calculations. Apply this grading policy to my data, show each calculation and edge case, and compare the requested what-if scenarios."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

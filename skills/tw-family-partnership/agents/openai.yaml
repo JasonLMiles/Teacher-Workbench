@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Family Partnership"
+  short_description: "Draft clear, reciprocal family communication"
+  default_prompt: "Use $tw-family-partnership to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-student-reflection-tracking"
+  short_description: "Build student reflection and progress tracking tools"
+  default_prompt: "Use $tw-student-reflection-tracking to create an age-appropriate student reflection and progress tracking sheet."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

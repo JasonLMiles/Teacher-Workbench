@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.4",
+  "brief": {
+    "task_id": "",
+    "skill_name": "",
+    "question": "",
+    "constraints": [],
+    "curriculum_reference_pack": null,
+    "curriculum_source_records": [],
+    "source_document_brief": null,
+    "input_mode": "conversation_files_or_mixed",
+    "requested_output_format": null,
+    "audience": null,
+    "artifact_destination": null,
+    "assistant_group_context": null,
+    "intervention_context": null,
+    "grading_analysis_context": null
+  },
+  "return": {
+    "findings": [],
+    "observed_evidence": [],
+    "inferences": [],
+    "proposed_action": "",
+    "artifact": "",
+    "verified_alignment": [],
+    "source_records": [],
+    "evidence_strength_limits": [],
+    "assumptions": [],
+    "assessment_access_implications": [],
+    "capability_gaps": [],
+    "follow_up": {
+      "measure": "",
+      "decision_rule": ""
+    },
+    "curriculum_sources_used": [],
+    "curriculum_adaptations": [],
+    "artifact_status": null,
+    "artifact_verification": [],
+    "source_plan_changes": [],
+    "assistant_group_packet": null,
+    "teacher_handback": null,
+    "intervention_packet": null,
+    "group_plan": null,
+    "taxonomy_audit": null,
+    "proficiency_scale_rubric": null,
+    "analysis_inputs_policy": null,
+    "analysis_results_audit": null
+  }
+}

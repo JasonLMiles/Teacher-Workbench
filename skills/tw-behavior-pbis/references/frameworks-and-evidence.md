@@ -1,0 +1,17 @@
+# Frameworks and evidence
+Primary pages checked 2026-09-29 UTC; retrieve relevant full recommendations and newer evidence at use. A framework is not a program effect estimate or a legal rule.
+
+| Framework/source | Appropriate role and interpretation |
+| --- | --- |
+| [Center on PBIS: classroom PBIS](https://www.pbis.org/classroom-pbis) | Organize practices, adult support systems and data across universal, targeted and individualized support. Treat tiers as support intensity, not student labels. |
+| [PBIS Supporting and Responding, version 2, April 2025](https://www.pbis.org/resource/supporting-and-responding-to-behavior-evidence-based-classroom-strategies-for-teachers) | Starting point for positive/proactive classroom practice; consult the actual guide before prescribing a detailed routine. |
+| [MTSS in the Classroom, 2026](https://www.pbis.org/resource/multi-tiered-system-of-supports-mtss-in-the-classroom) | Guidance connecting academic and social/emotional/behavioral support, including when to adapt or fade temporary support. Recheck date/version and applicability. |
+| [California MTSS entry](https://www.cde.ca.gov/ci/cr/ri/index.asp) | Starting point for California system context. Automated retrieval was blocked during this build; no claim of full-text verification. Use a supplied or accessible official document when a California-specific claim depends on it. |
+| [CASEL fundamentals](https://casel.org/fundamentals-of-sel/) | Distinguish teaching social/emotional skills from a behavior consequence system. Check evidence for a specific program separately. |
+| [RAND restorative-practices evaluation](https://www.rand.org/pubs/research_reports/RR2840.html) | Original evaluation with setting-specific findings and limits. Examine outcomes and implementation rather than promising academic or behavior gains from any restorative conversation. |
+
+The [WWC K–5 teacher-delivered behavior guide](https://ies.ed.gov/ncee/WWC/PracticeGuide/31/Published) was released December 2024. Its checked ratings are strong for expectations instruction, reminders, positive acknowledgement and feedback using behavior ratings; moderate for instructional choices, varied response opportunities and self-monitoring/reflection. Preserve recommendation-level ratings, scope and conditions. Do not relabel a locally authored routine, a whole PBIS system or an intervention in another grade span as “WWC proven.”
+
+For observation: define the expected and observed behavior concretely, record antecedent/task/access context and adult response, use comparable windows and opportunities, distinguish no event from not observed, and avoid attributing causation from a short trend. Evaluate feasibility and fidelity before escalating. A formal functional assessment and individualized plan require the authorized team's process and appropriate data.
+
+Match the review period to the practice: a one-week implementation check can identify access barriers, cue clarity and feasibility, but cannot establish intervention effectiveness. For behavior self-monitoring specifically, WWC recommendation 6 suggests at least 6–8 weeks to evaluate how it is working and periodic review before fading (printed pages 54 and 61; [full guide](https://ies.ed.gov/ncee/WWC/Docs/PracticeGuide/behavioral-interventions-practice-guide_v3a_508a.pdf)). Check prerequisite readiness; this approach may be unsuitable for some K–1 learners. Do not apply that interval mechanically to every routine or delay needed changes to an inaccessible practice.

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-pre-post-growth-analysis"
+  short_description: "Analyze matched pre/post growth and uncertainty"
+  default_prompt: "Use $tw-pre-post-growth-analysis. Analyze these pre/post scores with matched learners, show growth and missingness, and explain what the results can and cannot establish."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

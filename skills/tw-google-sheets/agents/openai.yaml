@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-google-sheets"
+  short_description: "Create and verify teacher and student spreadsheets"
+  default_prompt: "Use $tw-google-sheets to create a Google Sheets classroom tracker using my approved account when available."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Humanities Inquiry"
+  short_description: "Build source-based inquiry and arguments"
+  default_prompt: "Use $tw-humanities-inquiry to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

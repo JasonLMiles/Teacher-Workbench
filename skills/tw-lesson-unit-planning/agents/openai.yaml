@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Lesson Unit Planning"
+  short_description: "Build coherent lessons and learning sequences"
+  default_prompt: "Use $tw-lesson-unit-planning to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

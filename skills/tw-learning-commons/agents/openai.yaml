@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Learning Commons"
+  short_description: "Find standards, components and prerequisite connections"
+  default_prompt: "Use $tw-learning-commons to help with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

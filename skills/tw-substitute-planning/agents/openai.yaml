@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Substitute Planning"
+  short_description: "Prepare practical substitute teaching packets"
+  default_prompt: "Use $tw-substitute-planning to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

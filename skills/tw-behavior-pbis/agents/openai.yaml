@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-behavior-pbis"
+  short_description: "Plan positive behavior supports with PBIS and MTSS"
+  default_prompt: "Use $tw-behavior-pbis to build a practical PBIS classroom support plan with a simple review measure."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

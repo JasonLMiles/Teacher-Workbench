@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-blooms-taxonomy"
+  short_description: "Analyze cognitive demand and design better tasks"
+  default_prompt: "Use $tw-blooms-taxonomy. Analyze these tasks using revised Bloom’s taxonomy, explain the evidence for each classification, and develop aligned alternatives."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

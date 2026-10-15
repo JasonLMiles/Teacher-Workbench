@@ -1,0 +1,194 @@
+{
+  "version": "1.0",
+  "origin": "Original Teacher Workbench operational criteria; not a validated instrument",
+  "sets": {
+    "common": [
+      {
+        "id": "C1",
+        "severity": "blocker",
+        "title": "Target and evidence agree",
+        "pass_when": "The task elicits the stated learning target and claimed standard; any alignment limit is explicit.",
+        "required": true
+      },
+      {
+        "id": "C2",
+        "severity": "blocker",
+        "title": "Content and keys are accurate",
+        "pass_when": "Worked examples, accepted answers, units and scoring directions are correct and internally consistent.",
+        "required": true
+      },
+      {
+        "id": "C3",
+        "severity": "blocker",
+        "title": "Claims and sources are represented honestly",
+        "pass_when": "External claims have supporting opened sources; authored tasks and uncertain observations are labeled.",
+        "required": true
+      },
+      {
+        "id": "C4",
+        "severity": "advisory",
+        "title": "Materials are usable",
+        "pass_when": "The promised student tasks, source stimuli, teacher directions and timing are present and feasible.",
+        "required": true
+      },
+      {
+        "id": "C5",
+        "severity": "blocker",
+        "title": "Evidence supports the inference",
+        "pass_when": "Individual learning, group products, behavior, simulation and missing evidence are distinguished; score claims stay within the data.",
+        "required": true
+      },
+      {
+        "id": "C6",
+        "severity": "blocker",
+        "title": "Participation and support are appropriate",
+        "pass_when": "Required supports, privacy and developmentally appropriate directions are preserved; no unjustified exclusion or harmful labeling.",
+        "required": true
+      }
+    ],
+    "math": [
+      {
+        "id": "M1",
+        "severity": "blocker",
+        "title": "Mathematical meaning",
+        "pass_when": "Representations, symbols and operations agree; explanation matches the mathematical construct.",
+        "required": true
+      },
+      {
+        "id": "M2",
+        "severity": "advisory",
+        "title": "Student reasoning",
+        "pass_when": "Tasks require the reasoning warranted by the target and accept defensible strategies.",
+        "required": true
+      }
+    ],
+    "ela": [
+      {
+        "id": "E1",
+        "severity": "blocker",
+        "title": "Text evidence",
+        "pass_when": "Questions, models and keys are supported by the actual text or language evidence.",
+        "required": true
+      },
+      {
+        "id": "E2",
+        "severity": "blocker",
+        "title": "Literacy construct",
+        "pass_when": "Decoding, fluency, comprehension and composition evidence are distinguished; scaffolds do not silently replace the target.",
+        "required": true
+      }
+    ],
+    "science": [
+      {
+        "id": "S1",
+        "severity": "blocker",
+        "title": "Scientific reasoning",
+        "pass_when": "Phenomena, observations, data, units and explanations are accurate; conclusions follow from evidence.",
+        "required": true
+      },
+      {
+        "id": "S2",
+        "severity": "advisory",
+        "title": "Three-dimensional learning",
+        "pass_when": "Where NGSS alignment is claimed, student work integrates the relevant practice, disciplinary idea and crosscutting concept.",
+        "required": false
+      }
+    ],
+    "humanities": [
+      {
+        "id": "H1",
+        "severity": "blocker",
+        "title": "Source reasoning",
+        "pass_when": "Source identity, context and perspective are accurate; claims are distinguished from established evidence.",
+        "required": true
+      },
+      {
+        "id": "H2",
+        "severity": "advisory",
+        "title": "Evidence-based interpretation",
+        "pass_when": "Tasks elicit sourcing, contextualization or corroboration as warranted, without treating all claims as equally supported.",
+        "required": true
+      }
+    ],
+    "access_language": [
+      {
+        "id": "A1",
+        "severity": "blocker",
+        "title": "Construct-preserving access",
+        "pass_when": "Supports address a stated barrier and preserve required accommodations; changed constructs are disclosed.",
+        "required": true
+      },
+      {
+        "id": "A2",
+        "severity": "advisory",
+        "title": "Usable language support",
+        "pass_when": "Language objectives and actual models/frames fit the content; fading applies to optional prompts, not required access.",
+        "required": false
+      }
+    ],
+    "formative": [
+      {
+        "id": "F1",
+        "severity": "blocker",
+        "title": "Diagnostic interpretation",
+        "pass_when": "Distractors and response patterns support tentative hypotheses; missing/ambiguous responses receive follow-up rather than unsupported labels.",
+        "required": true
+      },
+      {
+        "id": "F2",
+        "severity": "advisory",
+        "title": "Actionable follow-up",
+        "pass_when": "The packet supplies a next teaching move and another task keyed to the observed evidence.",
+        "required": true
+      }
+    ],
+    "rehearsal": [
+      {
+        "id": "R1",
+        "severity": "blocker",
+        "title": "Simulation boundary",
+        "pass_when": "Invented student responses and predicted outcomes are labeled as simulation or hypotheses.",
+        "required": true
+      },
+      {
+        "id": "R2",
+        "severity": "advisory",
+        "title": "Teacher practice",
+        "pass_when": "Interactive mode gives space for the teacher to respond; feedback uses their actual move and supports a retry.",
+        "required": false
+      }
+    ],
+    "intervention": [
+      {
+        "id": "I1",
+        "severity": "blocker",
+        "title": "Need and intensity",
+        "pass_when": "Activities match a documented target gap; tier, placement and cause are not inferred from a single score.",
+        "required": true
+      },
+      {
+        "id": "I2",
+        "severity": "advisory",
+        "title": "Implementation and monitoring",
+        "pass_when": "The adult has models, keys, bounded scaffold decisions and feasible checks/regrouping rules.",
+        "required": true
+      }
+    ],
+    "grading": [
+      {
+        "id": "G1",
+        "severity": "blocker",
+        "title": "Policy and arithmetic",
+        "pass_when": "Calculation uses the declared policy, correctly handles missing/exempt evidence and can be reproduced.",
+        "required": true
+      },
+      {
+        "id": "G2",
+        "severity": "blocker",
+        "title": "Defensible interpretation",
+        "pass_when": "Rollups retain coverage/support conditions; ordinal scales, growth and uncertainty are not misrepresented.",
+        "required": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "release": "1.4.1",
+  "date": "2026-09-29",
+  "unique_destinations": 19,
+  "scope": "Guide source destination and relevant explanatory-context checks. Not a systematic review or a new effectiveness claim. Sources must be rechecked for the actual question at use.",
+  "sources": [
+    {
+      "url": "https://www2.cde.ca.gov/cacs/id/web/331",
+      "label": "3.OA.1",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.cde.ca.gov/ci/rl/",
+      "label": "California ELA and ELD guidance",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://udlguidelines.cast.org/",
+      "label": "CAST's UDL Guidelines",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/teaching-assistants",
+      "label": "EEF's teaching-assistant guidance",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=45344",
+      "label": "Education Code section 45344",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.cde.ca.gov/ci/cr/ri/mtsscomprti2.asp",
+      "label": "California MTSS guidance",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://intensiveintervention.org/data-based-individualization",
+      "label": "NCII's individualized intervention process",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.chemnet.edu.au/sites/default/files/files/Blooms_taxonomy_2002_Krathwohl.pdf",
+      "label": "Krathwohl's overview",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://soltreemrls3.s3-us-west-2.amazonaws.com/marzanoresources.com/media/documents/reproducibles/HDUPSC/proficiencyscalewithsampleactivities.pdf",
+      "label": "publisher's example",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=49066",
+      "label": "California Education Code section 49066",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.testingstandards.net/open-access-files.html",
+      "label": "Testing Standards",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.pbis.org/classroom-pbis",
+      "label": "Classroom PBIS guidance",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://tpack.org/tpackrefs/archives/7661",
+      "label": "TPACK",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.tripleeframework.com/about.html",
+      "label": "Triple E",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://iste.org/standards/educators",
+      "label": "ISTE's educator standards",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers",
+      "label": "UNESCO's teacher AI competency framework",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://www2.cde.ca.gov/cacs/",
+      "label": "California content standards",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://ies.ed.gov/ncee/wwc/practiceguides",
+      "label": "WWC practice guides",
+      "status": "opened; resolved to intended primary or official source"
+    },
+    {
+      "url": "https://docs.ctc.ca.gov/Document/Download/30328",
+      "label": "California Standards for the Teaching Profession",
+      "status": "opened; resolved to intended primary or official source"
+    }
+  ]
+}

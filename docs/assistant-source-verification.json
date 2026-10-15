@@ -1,0 +1,44 @@
+[
+  {
+    "id": "IA1",
+    "title": "EEF Deployment of Teaching Assistants, March 2025",
+    "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/teaching-assistants",
+    "checked_at": "2026-09-29",
+    "status": "Opened official current guide landing page; third-edition identity/date checked."
+  },
+  {
+    "id": "IA2",
+    "title": "EEF full teaching-assistant report",
+    "url": "https://d2tic4wvo1iusb.cloudfront.net/production/eef-guidance-reports/teaching-assistants/deployment_of_teaching_assistants_-_guidance_report_v1.1.0.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Read recommendations and relevant passages on scaffolding, structured interventions, teacher access and preparation; England context retained."
+  },
+  {
+    "id": "IA3",
+    "title": "EEF scaffolding framework",
+    "url": "https://d2tic4wvo1iusb.cloudfront.net/production/eef-guidance-reports/teaching-assistants/scaffolding_framework.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Opened full one-page practitioner tool; response-sensitive assistance and explicit teaching for new skills checked."
+  },
+  {
+    "id": "IA4",
+    "title": "EEF teacher–assistant partnership tool",
+    "url": "https://d2tic4wvo1iusb.cloudfront.net/production/eef-guidance-reports/teaching-assistants/effective_teacher_%E2%80%93_teaching_assistant_partnerships.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Opened full one-page preparation/communication tool."
+  },
+  {
+    "id": "IA5",
+    "title": "WWC elementary mathematics intervention guide",
+    "url": "https://ies.ed.gov/ncee/wwc/practiceguide/26",
+    "checked_at": "2026-09-29",
+    "status": "Opened guide entry; K–6 scope and strong ratings for systematic instruction, mathematical language and representations checked. Retrieve full recommendations at use."
+  },
+  {
+    "id": "IA6",
+    "title": "California Education Code §45344",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=45344",
+    "checked_at": "2026-09-29",
+    "status": "Opened current official section; (a) duties, physical presence, teacher responsibility and grade restriction; (b) district qualifications checked."
+  }
+]

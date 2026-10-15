@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.1",
+  "purpose": "Template: fill only observed facts; omit unused fields.",
+  "task_id": null,
+  "scope": {
+    "curriculum": null,
+    "grade_course": null,
+    "subjects": [],
+    "unit_lesson": null,
+    "teacher_selected_locations": []
+  },
+  "source_records": [
+    {
+      "source_id": null,
+      "provider": null,
+      "title": null,
+      "issuer": null,
+      "stable_url": null,
+      "supplied_file_reference": null,
+      "provider_item_id": null,
+      "edition": null,
+      "revision_or_commit": null,
+      "modified_at": null,
+      "course_grade": null,
+      "unit_lesson": null,
+      "locators": [],
+      "access_state": "candidate",
+      "accessed_at": null,
+      "link_verified_at": null,
+      "requires_account": null,
+      "read_coverage": [],
+      "missing_content": [],
+      "supported_claims": [],
+      "visibility": null,
+      "reuse_limits": null
+    }
+  ],
+  "allowed_access_states": [
+    "candidate",
+    "metadata_only",
+    "login_required",
+    "permission_denied",
+    "read_partial",
+    "read_verified",
+    "unavailable"
+  ],
+  "search_coverage": [],
+  "material_conflicts": [],
+  "capability_gaps": [],
+  "persistence": {
+    "requested": false,
+    "authorized_destination": null,
+    "saved": false
+  }
+}

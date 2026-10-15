@@ -1,0 +1,131 @@
+{
+  "synthetic": true,
+  "policy": {
+    "aggregation": "points",
+    "missing": "exclude",
+    "attempts": "latest",
+    "retake_comparable": true,
+    "drop_lowest": {
+      "Practice": 1,
+      "Tests": 0
+    },
+    "drop_min_keep": 1,
+    "drop_missing_zeros": false,
+    "category_weights": {
+      "Practice": 0.4,
+      "Tests": 0.6
+    },
+    "empty_categories": "error",
+    "extra_credit": "points_bonus",
+    "allow_scores_above_max": false,
+    "floor_pct": null,
+    "cap_pct": 100,
+    "round_digits": 2,
+    "rounding": "half_up",
+    "threshold_basis": "raw",
+    "thresholds": [
+      {
+        "min": 90,
+        "label": "A"
+      },
+      {
+        "min": 80,
+        "label": "B"
+      },
+      {
+        "min": 70,
+        "label": "C"
+      },
+      {
+        "min": 60,
+        "label": "D"
+      },
+      {
+        "min": 0,
+        "label": "F"
+      }
+    ]
+  },
+  "records": [
+    {
+      "student_code": "A",
+      "assignment_id": "p1",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": 8,
+      "possible": 10,
+      "status": "observed",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "p2",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": 18,
+      "possible": 20,
+      "status": "observed",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "p3",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": null,
+      "possible": 10,
+      "status": "missing",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "p4",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": null,
+      "possible": 10,
+      "status": "exempt",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "p5",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": 0,
+      "possible": 10,
+      "status": "observed",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "bonus",
+      "attempt_order": 1,
+      "category": "Practice",
+      "earned": 2,
+      "possible": 0,
+      "status": "observed",
+      "extra_credit": true
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "t1",
+      "attempt_order": 1,
+      "category": "Tests",
+      "earned": 35,
+      "possible": 50,
+      "status": "observed",
+      "extra_credit": false
+    },
+    {
+      "student_code": "A",
+      "assignment_id": "t1",
+      "attempt_order": 2,
+      "category": "Tests",
+      "earned": 45,
+      "possible": 50,
+      "status": "observed",
+      "extra_credit": false
+    }
+  ]
+}

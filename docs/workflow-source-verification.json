@@ -1,0 +1,93 @@
+[
+  {
+    "id": "W1",
+    "title": "WWC Teacher-Delivered Behavioral Interventions in Grades K–5, December 2024",
+    "url": "https://ies.ed.gov/ncee/WWC/PracticeGuide/31/Published",
+    "checked_at": "2026-09-29",
+    "status": "opened; recommendation-specific evidence ratings and K–5 scope checked"
+  },
+  {
+    "id": "W2",
+    "title": "WWC full behavior practice guide",
+    "url": "https://ies.ed.gov/ncee/WWC/Docs/PracticeGuide/behavioral-interventions-practice-guide_v3a_508a.pdf",
+    "checked_at": "2026-09-29",
+    "status": "opened; recommendation 6, printed pages 54 and 61, readiness and review-duration guidance checked"
+  },
+  {
+    "id": "W3",
+    "title": "Center on PBIS: classroom PBIS",
+    "url": "https://www.pbis.org/classroom-pbis",
+    "checked_at": "2026-09-29",
+    "status": "opened; practices, systems, data and support tiers checked"
+  },
+  {
+    "id": "W4",
+    "title": "PBIS Supporting and Responding, version 2, April 2025",
+    "url": "https://www.pbis.org/resource/supporting-and-responding-to-behavior-evidence-based-classroom-strategies-for-teachers",
+    "checked_at": "2026-09-29",
+    "status": "opened; official publication identity/date and summary checked; retrieve the relevant guide passages at use"
+  },
+  {
+    "id": "W5",
+    "title": "MTSS in the Classroom, version 2, September 2, 2026",
+    "url": "https://www.pbis.org/resource/multi-tiered-system-of-supports-mtss-in-the-classroom",
+    "checked_at": "2026-09-29",
+    "status": "opened; official publication identity/date and summary checked"
+  },
+  {
+    "id": "W6",
+    "title": "California MTSS entry",
+    "url": "https://www.cde.ca.gov/ci/cr/ri/index.asp",
+    "checked_at": "2026-09-29",
+    "status": "access limited; official destination located but automated page retrieval blocked; full content not verified"
+  },
+  {
+    "id": "W7",
+    "title": "CASEL fundamentals of SEL",
+    "url": "https://casel.org/fundamentals-of-sel/",
+    "checked_at": "2026-09-29",
+    "status": "opened; framework purpose checked; does not establish a specific program effect"
+  },
+  {
+    "id": "W8",
+    "title": "RAND restorative-practices evaluation",
+    "url": "https://www.rand.org/pubs/research_reports/RR2840.html",
+    "checked_at": "2026-09-29",
+    "status": "opened; original study record and summary with setting-specific findings; not evidence that any locally authored routine is effective"
+  },
+  {
+    "id": "W9",
+    "title": "EEF metacognition and self-regulated learning, second edition, November 2025",
+    "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition",
+    "checked_at": "2026-09-29",
+    "status": "opened; updated guidance and subject-embedded planning, monitoring and evaluation checked"
+  },
+  {
+    "id": "W10",
+    "title": "Google Sheets create and manage spreadsheets",
+    "url": "https://developers.google.com/workspace/sheets/api/guides/create",
+    "checked_at": "2026-09-29",
+    "status": "opened; native creation concepts checked; actual host tool schemas and write permissions still required"
+  },
+  {
+    "id": "W11",
+    "title": "Google Drive uploads and conversion",
+    "url": "https://developers.google.com/workspace/drive/api/guides/manage-uploads#import_to_google_docs_types",
+    "checked_at": "2026-09-29",
+    "status": "opened; import/conversion concepts checked; native conversion was not performed"
+  },
+  {
+    "id": "W12",
+    "title": "Canva design imports",
+    "url": "https://www.canva.dev/docs/apps/rest-apis/reference/design-imports/",
+    "checked_at": "2026-09-29",
+    "status": "opened; supported editable import concepts checked; an import into a Canva account was not performed"
+  },
+  {
+    "id": "W13",
+    "title": "Canva design exports",
+    "url": "https://www.canva.dev/docs/apps/rest-apis/reference/exports/",
+    "checked_at": "2026-09-29",
+    "status": "opened; export-job and format concepts checked; actual account export not performed"
+  }
+]

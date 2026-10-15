@@ -1,0 +1,77 @@
+{
+  "release": "1.4.0",
+  "date": "2026-09-29",
+  "review_status": "passed",
+  "cases": [
+    {
+      "id": "INT-GROUP",
+      "skills": [
+        "tw-intervention-activities",
+        "tw-intervention-grouping",
+        "tw-instructional-assistant-small-groups"
+      ],
+      "task": "Seven coded grade 3 learners with different equal-group errors and missing evidence; constrained staffing/availability; actual tier activities and novice assistant handoff.",
+      "observed": "Targets distinguished construction, counting and equation errors; absent evidence remained a diagnostic queue; schedule exposed limited dose and preserved group-size/availability constraints. All requested tiers had actual models, tasks, keys, scaffolds, fresh checks and review. Assistant received scripted primer, preparation check, decisions, individual record and handback.",
+      "review": "Keys and activity content reviewed; tier labels did not imply eligibility or validated program dosage. Conservative interpretation of ambiguous time blocks was explicit.",
+      "status": "passed"
+    },
+    {
+      "id": "BLOOM-MARZANO-SBG",
+      "skills": [
+        "tw-blooms-taxonomy",
+        "tw-marzano-grading-rubrics",
+        "tw-standards-based-grading"
+      ],
+      "task": "Grade 6 unit-rate tasks, apparent create/copy demand, oral accommodation, original proficiency scale/rubric, score history and reporting choices.",
+      "observed": "Knowledge/process analysis used task evidence; concrete replacement tasks/keys and verified standards included. Scale distinguished supporting/target/transfer, provided anchors and analytic criteria. Missing remained separate, accommodation did not cap scores, numerical means were conditional, and no 3-to-75% conversion occurred.",
+      "review": "Actual output and keys reviewed; taxonomy and proficiency stayed distinct; local policy and teacher review remained explicit.",
+      "status": "passed"
+    },
+    {
+      "id": "CALCULATION-RUNS",
+      "skills": [
+        "tw-standards-progress-analysis",
+        "tw-pre-post-growth-analysis",
+        "tw-grade-calculations"
+      ],
+      "task": "Execute synthetic examples with latest/lower-median, growth baseline/paired interval, missing exclude/zero; derive required final score.",
+      "observed": "Six CLI runs exited zero. Latest S1=3 versus lower median=2; domain remained unavailable with missing S2. Matched n=3, mean change=4, d_z=2, d_av=0.4174243; paired 95% interval [-0.968275,8.968275]. Grades 91.33 and 82.00 under changed missing policy; custom final score 97 independently checked.",
+      "review": "Actual inputs/outputs, report and provenance reviewed. Only stated policy fields changed. Post-run growth input guards were strengthened; 26 final-code numerical tests cover the revised version.",
+      "status": "passed"
+    }
+  ],
+  "original_trial_artifact_sha256": {
+    "intervention.md": "23e3353925b0771f8f84d4e7641c6c67e310b4091987f3b4f7abf8b7a6067089",
+    "taxonomy-grading.md": "48a69f12eae061caafacef2dea132bfe694296c7be536f9424ec19e005b70c97",
+    "calculation-report.md": "6d4c3b097efa3c1f0d08bef592fa48f0e8609e569559ea6cf460a1dd3a31d0b3"
+  },
+  "numerical_checks": {
+    "new": 26,
+    "existing_measurement": 9,
+    "new_prepackage_result": "passed",
+    "test_iteration": "A weighted floating-point rollup assertion used exact equality initially; changed test to numeric tolerance. Calculator unchanged.",
+    "coverage": [
+      "matched IDs and attrition",
+      "effect-size denominators",
+      "missing/zero and zero baseline",
+      "scale conversions/direction",
+      "ceiling and undefined statistics",
+      "paired t interval",
+      "ordinal and interval rules",
+      "rollup coverage/essential flags",
+      "irregular timestamps",
+      "duplicate/ambiguous data",
+      "retake selection",
+      "weighted points vs equal items",
+      "bonus/drop/denominator rules",
+      "empty categories",
+      "rounding ties and threshold order"
+    ]
+  },
+  "limits": [
+    "Synthetic and generated-output validation; no classroom effectiveness evidence.",
+    "No live gradebook change, cloud document creation, private provider sign-in or public plugin publication.",
+    "No full IRT calibration or new trial of every earlier skill.",
+    "Source verification was targeted, not a systematic review."
+  ]
+}

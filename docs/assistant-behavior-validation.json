@@ -1,0 +1,47 @@
+{
+  "release": "1.3.0",
+  "date": "2026-09-29",
+  "method": "Two fresh-context agents used the actual skill and resources on concrete teacher requests. The parent reviewed the complete Markdown outputs, task keys, support decisions, timing and response records. A subsequent reading-packet revision checks the clarified format instruction; it is a continuation, not a new independent trial.",
+  "review_status": "passed",
+  "cases": [
+    {
+      "id": "IA1",
+      "task": "Grade 3 equal-group multiplication reteaching; novice assistant; five learners; 20 minutes; five-minute preparation target; paper, pencils and 30 counters; oral-response accommodation and language support; teacher at a nearby group.",
+      "observed": [
+        "Produced ten numbered sections with a compact handwritten quick-start card, accurate worked model and rehearsal answers.",
+        "Included complete practice, private fresh checks, two reserve checks, extension and familiar counting fallback with checked answers.",
+        "Counter allocation uses twelve for modeling, then six per learner for thirty total, then a shared bank; the largest individual task uses twenty.",
+        "Schedules total twenty minutes and protect individual checks; an unfinished or inaccessible check is not recorded as incorrect.",
+        "Preserved oral response and faithful scribing, offered language frames without inventing learner identities, and separated mathematical from language evidence.",
+        "Included specific misconception, no-start, whole-group, mixed-rate, frustration, missing-material and unexpected-answer branches with the supplied blue-card/help-note routines.",
+        "Distinguished first attempts, coached retries and fresh evidence; kept teacher responsibility and a brief scheduled handback."
+      ],
+      "status": "passed",
+      "limits": "Preparation and classroom timing are reasoned estimates, not observations with actual assistants or students. Packet remains proposed material.",
+      "reviewed_artifact_sha256": "ca73b81069df3429597a74d07f7767fc8b35019a6b94a78d2c830f65b91154d4"
+    },
+    {
+      "id": "IA2",
+      "task": "Grade 7 informational reading; six learners; 25 minutes; new and experienced assistants; teacher-created six-sentence garden text; language rehearsal and documented text-to-speech/dictation.",
+      "observed": [
+        "Preserved the supplied passage verbatim and supplied common task IDs, criteria and separate assistant run cards.",
+        "Both schedules total twenty-five minutes, with reciprocal oral rehearsal and a protected five-minute fresh check on a new library passage.",
+        "Worked keys distinguish reported observations from inferred causes, accept justified alternative claims and reject unsupported sole-cause conclusions.",
+        "Included actual student copy masters, fallback, extension, a fresh observation/inference item, response branches and a teacher evidence record.",
+        "Retained documented access and the supplied frustration/safety routines; recorded extra help separately from independent reasoning.",
+        "Initial output contained the required components but used additional top-level headings. The skill was clarified to preserve ten numbered sections and nest run cards/student pages.",
+        "Final continuation preserves ten numbered top-level sections, parallel run cards within section 3, student copy masters within section 4, and separate keys in section 5; checked source and task content remained intact."
+      ],
+      "status": "passed",
+      "limits": "The final format revision reuses the initial task/context. Markdown pagination is renderer dependent. No classroom effectiveness or fixed-layout export test was performed.",
+      "reviewed_artifact_sha256": "ffb4e527aea1cdbd09ef8a1b14f4f81cfd7782f6eca33028fdb8fb8cdd66bf6d"
+    }
+  ],
+  "unperformed": [
+    "Classroom trial with actual instructional assistants or students",
+    "Empirical validation of generated activities or expertise modes",
+    "Named intervention fidelity/training validation",
+    "Native Google Sheets or Canva operation",
+    "Public plugin portal import or publication"
+  ]
+}

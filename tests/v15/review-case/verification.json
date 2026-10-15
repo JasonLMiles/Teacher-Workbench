@@ -1,0 +1,38 @@
+{
+  "review_date": "2026-09-29",
+  "original_sha256": "721af0dc887226c6e2bf121d8afa277b4d97c4b1a6546fde8a74f4085dbaa47e",
+  "original_snapshot_matches": true,
+  "recomputed_from_dimensions": [
+    {
+      "height": 3,
+      "width": 5,
+      "area_square_units": 15,
+      "perimeter_units": 16
+    },
+    {
+      "height": 3,
+      "width": 4,
+      "area_square_units": 12,
+      "perimeter_units": 14
+    },
+    {
+      "height": 2,
+      "width": 5,
+      "area_square_units": 10,
+      "perimeter_units": 14
+    },
+    {
+      "height": 2,
+      "width": 6,
+      "area_square_units": 12,
+      "perimeter_units": 16
+    },
+    {
+      "height": 1,
+      "width": 12,
+      "area_square_units": 12,
+      "perimeter_units": 26
+    }
+  ],
+  "note": "Arithmetic verification only; no student data or classroom outcome tests."
+}

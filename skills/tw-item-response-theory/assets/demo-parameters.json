@@ -1,0 +1,9 @@
+{
+  "status": "synthetic_known_parameters_not_estimated",
+  "logistic_D": 1.0,
+  "theta": [-2, -1, 0, 0.5, 1, 2],
+  "items": [
+    {"id": "illustration_1", "a": 1.0, "b": 0.0, "c": 0.0},
+    {"id": "illustration_2", "a": 1.2, "b": 0.5, "c": 0.2}
+  ]
+}

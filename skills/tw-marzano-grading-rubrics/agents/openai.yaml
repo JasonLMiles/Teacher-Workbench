@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-marzano-grading-rubrics"
+  short_description: "Build Marzano-style scales and evidence-based rubrics"
+  default_prompt: "Use $tw-marzano-grading-rubrics. Create a Marzano-style proficiency scale and task rubric for this standard, with evidence examples and grading-policy notes."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

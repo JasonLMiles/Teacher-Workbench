@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.4",
+  "task_id": "teacher-selected",
+  "teacher_goal": "",
+  "grade_course": "",
+  "subjects": [],
+  "supplied_evidence": [],
+  "learner_strengths_needs": [],
+  "documented_supports": [],
+  "time_resources": {},
+  "ai_preference": "not_requested",
+  "local_procedures": [],
+  "deliverable": "",
+  "unresolved_facts": [],
+  "source_currency_requirements": [],
+  "curriculum_reference_pack": null,
+  "curriculum_source_records": [],
+  "curriculum_access_gaps": [],
+  "source_document_brief": null,
+  "input_mode": "conversation_files_or_mixed",
+  "requested_output_format": null,
+  "audience": null,
+  "artifact_destination": null,
+  "assistant_group_context": {
+    "assistant_content_routine_experience": null,
+    "support_mode": null,
+    "group_size": null,
+    "preparation_time": null,
+    "teacher_availability_and_supervision": null,
+    "approved_adaptations": [],
+    "required_supports": [],
+    "classroom_connection": null
+  },
+  "intervention_context": {
+    "identified_targets_and_evidence": [],
+    "tier_or_support_intensity": null,
+    "verified_program": null,
+    "baseline_and_progress_measure": null,
+    "staff_time_group_constraints": {},
+    "attendance_and_implementation": [],
+    "review_date": null
+  },
+  "grading_analysis_context": {
+    "standards_and_scale": null,
+    "local_policy_source": null,
+    "missing_retake_aggregation_rules": {},
+    "dated_evidence": null,
+    "pre_post_comparability": null,
+    "requested_analysis": [],
+    "teacher_review_required": true
+  }
+}

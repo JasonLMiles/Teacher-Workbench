@@ -1,0 +1,57 @@
+{
+  "synthetic": true,
+  "policy": {
+    "comparable": true,
+    "comparability_note": "Synthetic same-form score illustration; not classroom effect evidence.",
+    "analysis_scale": "raw",
+    "direction": "higher",
+    "score_min": 0,
+    "score_max": 100,
+    "inference": false,
+    "normalized_gain": false
+  },
+  "pre": [
+    {
+      "student_code": "A",
+      "score": 10,
+      "status": "observed"
+    },
+    {
+      "student_code": "B",
+      "score": 20,
+      "status": "observed"
+    },
+    {
+      "student_code": "C",
+      "score": 0,
+      "status": "observed"
+    },
+    {
+      "student_code": "D",
+      "score": 30,
+      "status": "observed"
+    }
+  ],
+  "post": [
+    {
+      "student_code": "C",
+      "score": 4,
+      "status": "observed"
+    },
+    {
+      "student_code": "A",
+      "score": 16,
+      "status": "observed"
+    },
+    {
+      "student_code": "B",
+      "score": 22,
+      "status": "observed"
+    },
+    {
+      "student_code": "E",
+      "score": 9,
+      "status": "observed"
+    }
+  ]
+}

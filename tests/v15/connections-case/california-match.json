@@ -1,0 +1,32 @@
+{
+  "route": "local_jsonl",
+  "source_file": "nodes.jsonl",
+  "retrieved_at": "2026-09-29T15:31:38.782751+00:00",
+  "lines_scanned": 2,
+  "complete": true,
+  "match": {
+    "statementCode": "SYN.3.A",
+    "jurisdiction": "California"
+  },
+  "data": [
+    {
+      "line": 1,
+      "record": {
+        "labels": [
+          "Standard"
+        ],
+        "properties": {
+          "identifier": "synthetic-a",
+          "statementCode": "SYN.3.A",
+          "jurisdiction": "California",
+          "description": "Synthetic fixture, not a real standard.",
+          "gradeLevel": [
+            "3"
+          ],
+          "license": "synthetic test fixture"
+        }
+      }
+    }
+  ],
+  "note": "Exact-match file scan only; does not establish graph or dataset completeness."
+}

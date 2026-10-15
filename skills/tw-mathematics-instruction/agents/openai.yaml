@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Mathematics Instruction"
+  short_description: "Teach mathematical concepts and reasoning"
+  default_prompt: "Use $tw-mathematics-instruction to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

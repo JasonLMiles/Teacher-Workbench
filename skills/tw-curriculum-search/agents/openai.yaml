@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Curriculum Search"
+  short_description: "Find and reference your teaching curriculum"
+  default_prompt: "Use $tw-curriculum-search to find my curriculum, guide any needed sign-in, and build a cited reference pack."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

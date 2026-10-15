@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-teaching-aids"
+  short_description: "Create usable teaching aids and student materials"
+  default_prompt: "Use $tw-teaching-aids to create a teaching aid and matching student resource for my learning goal."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
