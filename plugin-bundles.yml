@@ -1,0 +1,23 @@
+schema_version: 1
+catalog_name: teacher-workbench
+license_file: license.md
+
+publisher:
+  name: Jason Miles
+  website_url: https://github.com/JasonLMiles/Teacher-Workbench
+  privacy_url: https://github.com/JasonLMiles/Teacher-Workbench/blob/main/docs/PLUGIN-PACKAGES.md#privacy-and-data-handling
+  terms_url: https://github.com/JasonLMiles/Teacher-Workbench/blob/main/license.md
+
+# Search the repository recursively; use canonical source folders, not prior outputs.
+exclude:
+  - 'skill-packages/**'
+  - 'dist/**'
+  - 'tests/**'
+
+plugins:
+  - name: teacher-workbench
+    display_name: Teacher Workbench
+    description: Teacher planning, assessment, curriculum, intervention, and preparation workflows.
+    include: ['name:tw-*']
+    microsoft:
+      split: auto

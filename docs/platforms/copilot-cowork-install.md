@@ -4,6 +4,8 @@ For **Microsoft Copilot Cowork**, checked October 15, 2026. Use an organization-
 
 ## Upload the skills
 
+For bundled plugin packages, use the [Build skill plugins workflow](../PLUGIN-PACKAGES.md). The current suite produces three Copilot app ZIPs; install all three through your tenant's custom-app/plugin process. The steps below remain the individual-skill upload route.
+
 1. Extract Teacher Workbench and open `skill-packages/`.
 2. In Cowork, open **Customize → Skills → Add → Upload skill** using the arrow beside Add. Some layouts expose Customize through **+**.
 3. Upload `tw-orchestrator.zip`. Wait for validation and synchronization; confirm it appears under **Your skills**.

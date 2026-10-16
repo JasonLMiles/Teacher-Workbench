@@ -13,7 +13,7 @@ Version: **2.0.0** · Skill prefix: **`tw-`** · Start with **`tw-orchestrator`*
 1. Download this branch with GitHub's **Code → Download ZIP**, then extract it, or clone it:
 
    ```sh
-   git clone --branch initial https://github.com/JasonLMiles/Teacher-Workbench.git
+   git clone --branch main https://github.com/JasonLMiles/Teacher-Workbench.git
    cd Teacher-Workbench
    ```
 
@@ -52,9 +52,17 @@ The coordinating skill selects relevant specialists; it does not run all 45 for 
 | `docs/` | Teacher guide, workflow guides, migration notes, source records, and validation scope |
 | `tests/` | Synthetic numerical and workflow checks, plus package validation |
 | `tools/build_skill_archives.py` | Rebuilds individual skill ZIPs and their checksums |
+| `.github/workflows/build-skill-plugins.yml` | Builds plugin packages for Copilot, ChatGPT, Claude, Gemini app, and Gemini CLI |
+| `plugin-bundles.yml` | Bundle selection, publisher metadata, and package configuration |
 | `Teacher_Workbench_*_Prompt.md` | Detailed creation specifications and historical design context |
 
 The source folders are authoritative. The ZIPs package those files for individual skill uploads. Appearance metadata in `agents/openai.yaml` is optional for other hosts. This source distribution does not require a plugin manifest. The retained creation specifications describe earlier packaging options; use this README and the platform guides for current setup.
+
+## Generate plugin packages
+
+Open **[Actions → Build skill plugins](https://github.com/JasonLMiles/Teacher-Workbench/actions/workflows/build-skill-plugins.yml) → Run workflow**. Choose `main`, optionally enter a version, and run it. When it completes, open the run and download the **teacher-workbench-plugins-…** artifact.
+
+The current 45 skills produce three Copilot packages, one ChatGPT plugin, one Claude plugin, one Gemini CLI extension, 45 Gemini app skill ZIPs, and two marketplace ZIPs. Resource subfolders and MIT license notices are included. Pushes to `main` rebuild automatically; `v*` tags also create a draft release. See [package generation and installation](docs/PLUGIN-PACKAGES.md) for the output names and setup steps.
 
 ## Requirements and practical limits
 

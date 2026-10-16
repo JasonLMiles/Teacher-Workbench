@@ -1,6 +1,8 @@
 # Source publication and contributions
 
-This edition is the Teacher Workbench source distribution. Its initial publication branch is `initial` in [JasonLMiles/Teacher-Workbench](https://github.com/JasonLMiles/Teacher-Workbench). The current setup instructions are in the [README](../readme.md) and [platform guides](platforms/readme.md).
+This edition is the Teacher Workbench source distribution, maintained on `main` in [JasonLMiles/Teacher-Workbench](https://github.com/JasonLMiles/Teacher-Workbench). The current setup instructions are in the [README](../readme.md) and [platform guides](platforms/readme.md).
+
+The **Build skill plugins** action now also generates packages for Copilot Cowork, ChatGPT, Claude Cowork, Gemini app, and Gemini CLI. See [plugin packages](PLUGIN-PACKAGES.md) for manual builds, downloads, and tagged draft releases. Source changes on `main` rebuild automatically.
 
 ## What to share
 

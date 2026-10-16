@@ -1,0 +1,80 @@
+name: Build skill plugins
+description: Recursively package .skill archives and SKILL.md folders for Copilot, ChatGPT, Claude, Gemini app, and Gemini CLI.
+author: Jason Miles
+branding:
+  icon: package
+  color: blue
+inputs:
+  source:
+    description: Directory to search recursively, relative to the caller's working directory.
+    required: false
+    default: .
+  config:
+    description: YAML bundle configuration, relative to the caller's working directory.
+    required: false
+    default: plugin-bundles.yml
+  output:
+    description: Empty output directory. It is automatically excluded from discovery.
+    required: false
+    default: dist/skill-plugins
+  targets:
+    description: Comma-separated targets (copilot,chatgpt,claude,gemini-app,gemini-cli).
+    required: false
+    default: copilot,chatgpt,claude,gemini-app,gemini-cli
+  version:
+    description: Package version in MAJOR.MINOR.PATCH form; a leading v is accepted.
+    required: false
+    default: 0.1.0
+  strict-portability:
+    description: Fail on heuristic warnings about host-specific instructions.
+    required: false
+    default: 'false'
+outputs:
+  output-directory:
+    description: Absolute path of the generated output tree.
+    value: ${{ steps.build.outputs.output-directory }}
+  report:
+    description: Absolute path of build-report.json.
+    value: ${{ steps.build.outputs.report }}
+  archives:
+    description: JSON array of absolute ZIP paths, including the two marketplace ZIPs when selected.
+    value: ${{ steps.build.outputs.archives }}
+  archive-count:
+    description: Number of generated ZIPs.
+    value: ${{ steps.build.outputs.archive-count }}
+  gemini-install-guide:
+    description: Absolute path of GEMINI-INSTALL.md, or empty when neither Gemini target is selected.
+    value: ${{ steps.build.outputs.gemini-install-guide }}
+  skill-count:
+    description: Number of distinct skill contents included across all bundles.
+    value: ${{ steps.build.outputs.skill-count }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+      with:
+        python-version: '3.12'
+    - name: Install packager dependency
+      shell: bash
+      env:
+        BUILDER_ACTION_PATH: ${{ github.action_path }}
+      run: python -m pip install --disable-pip-version-check -r "$BUILDER_ACTION_PATH/requirements.txt"
+    - name: Build plugin packages
+      id: build
+      shell: bash
+      env:
+        BUILDER_ACTION_PATH: ${{ github.action_path }}
+        BUILDER_SOURCE: ${{ inputs.source }}
+        BUILDER_CONFIG: ${{ inputs.config }}
+        BUILDER_OUTPUT: ${{ inputs.output }}
+        BUILDER_TARGETS: ${{ inputs.targets }}
+        BUILDER_VERSION: ${{ inputs.version }}
+        BUILDER_STRICT: ${{ inputs.strict-portability }}
+      run: |
+        python "$BUILDER_ACTION_PATH/scripts/build_plugins.py" \
+          --source "$BUILDER_SOURCE" \
+          --config "$BUILDER_CONFIG" \
+          --output "$BUILDER_OUTPUT" \
+          --targets "$BUILDER_TARGETS" \
+          --version "$BUILDER_VERSION" \
+          --strict-portability "$BUILDER_STRICT"

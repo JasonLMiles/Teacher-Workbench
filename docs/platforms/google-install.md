@@ -4,7 +4,9 @@ Checked October 15, 2026. Choose the route available in your approved Google env
 
 ## Gemini Apps with Skills
 
-Google currently describes Skills as a gradual rollout for personal accounts, ages 18+, with Keep Activity enabled; work and school accounts are not yet eligible. Do not move school records to a personal account for this feature. See [Google's skill documentation](https://support.google.com/gemini/answer/17094296?hl=en).
+Skills availability depends on account rollout and organization settings. Google's Workspace transition guidance says the Gemini app rollout for work and school accounts began October 13, 2026 and is expected to complete by mid-November. Use your approved account; see [Google's skill documentation](https://support.google.com/gemini/answer/17094296?hl=en) and [Workspace rollout guidance](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/about-the-transition-to-skills).
+
+The [Build skill plugins workflow](../PLUGIN-PACKAGES.md) generates current Gemini app skill ZIPs and a bundled Gemini CLI extension. Its artifact includes `GEMINI-INSTALL.md` with exact filenames and installation commands. You can also use the individual uploads already in `skill-packages/`, as described below.
 
 1. Extract Teacher Workbench and open `skill-packages/`.
 2. In Gemini, open **Customize → Skills → Upload**. Upload `tw-orchestrator.zip`, review it, and select **Create**.
