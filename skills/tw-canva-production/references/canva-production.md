@@ -1,0 +1,10 @@
+# Canva production route
+Canva's integration may expose design creation, editing, import, previews and export. Discover the actual supported tools after connection; don't substitute guessed API calls. A directory listing establishes that an integration is available, not that the current user is connected or every operation is supported. Check current plan/credit restrictions only when relevant to a requested operation; do not purchase credits or premium assets without authorization.
+
+The official [design import reference](https://www.canva.dev/docs/apps/rest-apis/reference/design-imports/) identifies importable types including PowerPoint and Word; recheck the exact accepted format and limits. [Export reference](https://www.canva.dev/docs/apps/rest-apis/reference/exports/) describes supported exports, which vary by design type. These are capability references, not permission to deploy a custom service or use hidden credentials.
+
+Native path: resolve/create permitted design → populate content → inspect each page → correct issues → verify returned edit URL/export. If tools return a job ID, use the advertised polling/result operation until complete or a real blocker. Verify actual outputs rather than a generation receipt alone.
+
+Fallback path: use the host's document/presentation production skill to make an editable local source; render and inspect where supported; give precise import steps based on current Canva guidance. A flat PDF/PNG preview is useful but is not proof of editable native components. If the host cannot inspect a native design, state that visual verification was unavailable while still reporting actual creation status accurately.
+
+Student-facing pages should be age appropriate, uncluttered, high contrast and free of teacher keys, diagnostic labels and dense research annotations. Keep instructional sources and licensing notes in a separate teacher companion or notes area. Do not place other students' data in one learner's visible design. Use a new derivative unless the exact existing design was authorized for modification; do not share, publish or change access as a side effect of creation.

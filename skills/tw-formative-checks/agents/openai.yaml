@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Formative Checks"
+  short_description: "Create brief checks that guide the next teaching move"
+  default_prompt: "Use $tw-formative-checks to help with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

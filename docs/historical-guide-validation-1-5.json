@@ -1,0 +1,13 @@
+{
+  "release": "1.5.0",
+  "date": "2026-09-29",
+  "pages": 25,
+  "formats": [
+    "md",
+    "docx",
+    "pdf"
+  ],
+  "all_pages_visually_reviewed": true,
+  "skills_in_directory": 45,
+  "scope": "Layout, navigation, capability and source-link checks; not a usability study."
+}

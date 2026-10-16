@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.2",
+  "title": "",
+  "audience": "teacher_or_individual_student",
+  "native_target": {
+    "provider": "Google Sheets",
+    "account_selected": null,
+    "folder_or_existing_file": null
+  },
+  "tabs": [
+    {
+      "name": "Instructions",
+      "purpose": "Definitions and use directions",
+      "columns": []
+    },
+    {
+      "name": "Observations",
+      "purpose": "One comparable observation per row",
+      "columns": [
+        "date",
+        "target",
+        "measure",
+        "value",
+        "possible",
+        "status",
+        "support",
+        "evidence",
+        "next_action"
+      ]
+    },
+    {
+      "name": "Review",
+      "purpose": "Evidence-based reflection and next action",
+      "columns": []
+    }
+  ],
+  "formulas": [],
+  "validations": [],
+  "charts": [],
+  "sources": [],
+  "sharing_change_requested": false,
+  "output_status": "not_created",
+  "verification": []
+}

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-differentiation-accessibility"
+  short_description: "Differentiate access, support, and challenge"
+  default_prompt: "Use $tw-differentiation-accessibility to adapt this lesson for varied readiness, reading levels, language needs, and documented accommodations."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-intervention-grouping"
+  short_description: "Group learners by need and plan feasible intervention"
+  default_prompt: "Use $tw-intervention-grouping. Use this learner evidence and timetable to propose temporary intervention groups, activities and regrouping rules."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

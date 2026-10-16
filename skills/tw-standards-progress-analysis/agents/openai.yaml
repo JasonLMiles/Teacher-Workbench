@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-standards-progress-analysis"
+  short_description: "Analyze standards trends, coverage and rollups"
+  default_prompt: "Use $tw-standards-progress-analysis. Analyze this standards evidence over time, compare explicit summary policies, and show standard/domain rollups with coverage and limitations."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

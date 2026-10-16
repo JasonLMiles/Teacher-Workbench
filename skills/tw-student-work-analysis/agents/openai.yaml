@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Student Work Analysis"
+  short_description: "Turn student work into instructional next steps"
+  default_prompt: "Use $tw-student-work-analysis to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

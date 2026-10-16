@@ -1,0 +1,25 @@
+test_api_arbitrary_host_rejected (__main__.Helpers.test_api_arbitrary_host_rejected) ... ok
+test_api_bad_schema_rejected (__main__.Helpers.test_api_bad_schema_rejected) ... ok
+test_api_cycle_rejected (__main__.Helpers.test_api_cycle_rejected) ... ok
+test_api_pagination_preserves_records (__main__.Helpers.test_api_pagination_preserves_records) ... ok
+test_api_partial_is_explicit (__main__.Helpers.test_api_partial_is_explicit) ... ok
+test_api_secret_query_rejected (__main__.Helpers.test_api_secret_query_rejected) ... ok
+test_bad_timezone (__main__.Helpers.test_bad_timezone) ... ok
+test_blocker_overrides (__main__.Helpers.test_blocker_overrides) ... ok
+test_dst_ambiguous (__main__.Helpers.test_dst_ambiguous) ... ok
+test_dst_nonexistent (__main__.Helpers.test_dst_nonexistent) ... ok
+test_duplicate_rejected (__main__.Helpers.test_duplicate_rejected) ... ok
+test_holiday_invocation_disclosed (__main__.Helpers.test_holiday_invocation_disclosed) ... ok
+test_local_distinguishes_jurisdiction (__main__.Helpers.test_local_distinguishes_jurisdiction) ... ok
+test_local_partial (__main__.Helpers.test_local_partial) ... ok
+test_omissions_not_passed (__main__.Helpers.test_omissions_not_passed) ... ok
+test_pass_needs_locator (__main__.Helpers.test_pass_needs_locator) ... ok
+test_redirect_rejected (__main__.Helpers.test_redirect_rejected) ... ok
+test_required_not_omittable (__main__.Helpers.test_required_not_omittable) ... ok
+test_schedule_is_draft_timezone_count (__main__.Helpers.test_schedule_is_draft_timezone_count) ... ok
+test_weekday_mismatch (__main__.Helpers.test_weekday_mismatch) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.006s
+
+OK

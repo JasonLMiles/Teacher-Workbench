@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-standards-based-grading"
+  short_description: "Plan and audit standards-based grading policies"
+  default_prompt: "Use $tw-standards-based-grading. Help me design or audit this standards-based grading policy, with evidence rules, reassessment, reporting and transparent examples."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

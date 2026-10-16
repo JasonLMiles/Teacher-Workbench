@@ -1,0 +1,172 @@
+{
+  "artifact": "../review-case/corrected-resource.md",
+  "reviewer": "Codex model reinspection; same reviewer as original; no independent educator rater",
+  "review_date": "2026-09-29",
+  "previous_ratings": "../review-case/original-ratings.json",
+  "scope": "Entire corrected written resource, S1 and T1–T7. Design review only, not verification of implementation for an individual learner.",
+  "sets": [
+    "common",
+    "math",
+    "access_language",
+    "formative",
+    "intervention",
+    "grading"
+  ],
+  "excluded_sets": {
+    "ela": "No ELA text, reading, writing, or language standard is an intended score construct.",
+    "science": "No science instruction or NGSS alignment is claimed.",
+    "humanities": "No historical or humanities source interpretation is assigned.",
+    "rehearsal": "No teacher rehearsal, role-play, or simulated teacher dialogue is included; possible response patterns are diagnostic hypotheses, not a rehearsal."
+  },
+  "ratings": [
+    {
+      "id": "C1",
+      "status": "pass",
+      "locator": "corrected-resource.md:S1 items 1–3; T1 Target; T7 Alignment",
+      "reason": "Students find both measures and explain what each counts. The teacher notes identify only partial standards coverage and explicitly exclude a full 3.MD.7.a or mastery claim.",
+      "supporting_sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S10"
+      ]
+    },
+    {
+      "id": "C2",
+      "status": "pass",
+      "locator": "corrected-resource.md:T2 key; T3 profile; T5 model/recheck; T6 extension",
+      "reason": "Independently recomputed 3×5=15 and 2(3+5)=16; 3×4=12 and 2(3+4)=14; 2×5=10 and 2(2+5)=14; 2×6=12 and 2(2+6)=16. Keys and units are consistent. T3 uses expected values rather than carrying initial-ticket values into the recheck.",
+      "supporting_sources": []
+    },
+    {
+      "id": "C3",
+      "status": "pass",
+      "locator": "corrected-resource.md:opening Status; T2 authored-example note; T4 hypothesis note; T5 research limits; T7 sources",
+      "reason": "Authored tasks, timings, examples, and diagnostic hypotheses are labeled. Sources were opened and checked; WWC recommendation ratings are preserved without claiming validation of this ticket.",
+      "supporting_sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ]
+    },
+    {
+      "id": "C4",
+      "status": "pass",
+      "locator": "corrected-resource.md:T1 administration; S1 student section; T2 key; T3 record; T4–T6 teaching/recheck",
+      "reason": "Student tasks, materials, response space, estimated timing, accessible modes, keys, follow-up actions, and another task are present. The teacher is instructed to distribute only S1; teacher keys remain in teacher sections.",
+      "supporting_sources": []
+    },
+    {
+      "id": "C5",
+      "status": "pass",
+      "locator": "corrected-resource.md:T3 evidence codes and denominator identities; T4 last paragraph; T7 limits",
+      "reason": "Individual profiles, prompted performance, no evidence, absence, and class patterns are separated. The profile does not infer durable mastery, diagnosis, or readiness from a choice or group percentage.",
+      "supporting_sources": []
+    },
+    {
+      "id": "C6",
+      "status": "pass",
+      "locator": "corrected-resource.md:T1 Access; T3 private rows; T4 last paragraph",
+      "reason": "Required supports continue; the learner may express the same mathematics in several ways. The resource avoids labels and automatic placement and makes records private. Pass is for written design, not a claim that unseen student plans were implemented.",
+      "supporting_sources": [
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "id": "M1",
+      "status": "pass",
+      "locator": "corrected-resource.md:T2 explanations; T5 tile model/recheck",
+      "reason": "Area is linked to unit-square coverage and perimeter to the length of the outside boundary. Operations and units agree throughout; the model explicitly excludes internal edges from perimeter.",
+      "supporting_sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "id": "M2",
+      "status": "pass",
+      "locator": "corrected-resource.md:S1 item 3; T2 accepted reasoning; T3 distinction row; T6 extension",
+      "reason": "Students must explain/model what the measures count. Correct counting, repeated addition, multiplication, drawings, gestures, and oral reasoning are accepted. Formula-only work is not overinterpreted as conceptual distinction.",
+      "supporting_sources": [
+        "S4"
+      ]
+    },
+    {
+      "id": "A1",
+      "status": "pass",
+      "locator": "corrected-resource.md:T1 Access; T3 AP and support notes",
+      "reason": "Reading, handwriting, language, and communication barriers have defined options. Required supports remain. Assistance supplying a target component is disclosed and successful prompted performance is P-AP, while access support alone does not lower the math judgment.",
+      "supporting_sources": [
+        "S5"
+      ]
+    },
+    {
+      "id": "A2",
+      "status": "pass",
+      "locator": "corrected-resource.md:T1 Optional language support; T5 model/frame",
+      "reason": "The frame serves the stated explanation purpose and leaves mathematics for the learner. The model fits the content. Only the optional frame may fade when appropriate; required access continues. This criterion becomes applicable because a language scaffold is now included.",
+      "supporting_sources": [
+        "S8"
+      ]
+    },
+    {
+      "id": "F1",
+      "status": "pass",
+      "locator": "corrected-resource.md:T4 response-pattern table; T3 clarification/AP notes",
+      "reason": "Distractor interpretations are explicitly tentative and use a neutral probe before teaching. Correct-choice/weak-reasoning, units, blank, ambiguous, and conflicting responses receive distinct follow-up.",
+      "supporting_sources": []
+    },
+    {
+      "id": "F2",
+      "status": "pass",
+      "locator": "corrected-resource.md:T4 table; T5 brief model, fresh recheck, decision; T6 extension",
+      "reason": "The resource connects observed strategies to an immediate teaching move, supplies a new 2-by-5 task and key, and uses new evidence to decide next instruction.",
+      "supporting_sources": [
+        "S7"
+      ]
+    },
+    {
+      "id": "I1",
+      "status": "pass",
+      "locator": "corrected-resource.md:T4 last paragraph; T5 Decision",
+      "reason": "Support follows an observed and checked target gap; tier, disability, and cause are not inferred from one response. The short activity is bounded classroom reteaching, with existing supports and the established problem-solving process retained.",
+      "supporting_sources": [
+        "S6"
+      ]
+    },
+    {
+      "id": "I2",
+      "status": "pass",
+      "locator": "corrected-resource.md:T5 full model, prompt boundary, recheck/key, decision; T1 optional frame",
+      "reason": "The adult has a concrete model, correct key, timing estimate, scaffold guidance, and a feasible recheck and next-step rule. No outcome is claimed without student evidence.",
+      "supporting_sources": [
+        "S4",
+        "S8"
+      ]
+    },
+    {
+      "id": "G1",
+      "status": "pass",
+      "locator": "corrected-resource.md:T3 categories, P-AP instruction, class summary and count equations",
+      "reason": "The declared policy is formative categories without a total grade. D/P/N/NE are mutually exclusive for each offered student's row; P-AP is included within P and tagged separately. Blank offered papers stay NE, and absent/not-offered students remain separate visible counts. No numerical class data are invented.",
+      "supporting_sources": []
+    },
+    {
+      "id": "G2",
+      "status": "pass",
+      "locator": "corrected-resource.md:T3 reporting rate/support notes; T4 final paragraph; T7 limits",
+      "reason": "Any rate uses the named offered denominator and exposes missingness and prompts. Categorical profiles are not averaged or turned into mastery, disability, or placement. Broader claims require additional evidence.",
+      "supporting_sources": []
+    }
+  ]
+}

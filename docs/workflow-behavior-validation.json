@@ -1,0 +1,117 @@
+{
+  "release": "1.2.0",
+  "date": "2026-09-29",
+  "review_complete": true,
+  "method": "Four fresh-context skill trials; primary agent reviewed plans, observations, verification records and rendered workbook/presentation pages.",
+  "cases": [
+    {
+      "case": "W1",
+      "skills": [
+        "tw-curriculum-document-intake",
+        "tw-lesson-unit-planning",
+        "tw-substitute-planning"
+      ],
+      "input": "Supplied fictional scope.csv and lesson.md plus teacher correction 45 to 30 minutes; board/notebooks; required scribing; explicit instruction to stay offline and make no external claims.",
+      "status": "passed",
+      "observed": [
+        "Actual complete source reads and precise locators",
+        "Teacher time correction retained; source sequence, fraction pairs and supports preserved",
+        "10 lesson sections and 9 substitute sections in intended order",
+        "30-minute timings and correct separate task keys",
+        "Missing school procedures marked; official standards verification disclosed as unavailable in this offline trial"
+      ],
+      "artifacts": [
+        {
+          "kind": "lesson",
+          "sha256": "39212341875ac0971e5a63195937fea34c4596bc46accf590f08f5b063510cc9"
+        },
+        {
+          "kind": "substitute",
+          "sha256": "f265618d93176132d283bad4df9d89292afdab5b923187cd34509a3f4b342e23"
+        }
+      ]
+    },
+    {
+      "case": "W2",
+      "skills": [
+        "tw-student-reflection-tracking",
+        "tw-google-sheets"
+      ],
+      "input": "Four-row supplied deidentified/synthetic tracker CSV; offline editable XLSX, no cloud account connection.",
+      "status": "passed",
+      "observed": [
+        "Actual editable XLSX with three sheets, reflection prompts, example, evidence notes and editable chart",
+        "Calculated values 0%, blank, 75%, 100% preserve zero versus absence",
+        "Seven boundary checks, formula caches, date types and data validation inspected",
+        "All sheet regions visually reviewed; no clipping or chart overlap",
+        "No inferred mastery or growth from unknown task comparability; no native Google claim"
+      ],
+      "artifact_sha256": "e7e2042fd0674a4ade70bcc9026b626b56422f154de5fbc0c73c92106372d2bb",
+      "production_status": "local_file_created",
+      "native_google": "not performed",
+      "finding": "The host calculation runtime coerced an empty-string equality guard unexpectedly for a numeric zero. The trial used COUNT-based numeric completeness checks. The skill formula example was updated accordingly and still requires destination verification."
+    },
+    {
+      "case": "W3",
+      "skills": [
+        "tw-teaching-aids",
+        "tw-canva-production"
+      ],
+      "input": "Two grade 4 fraction pages and separate teacher key, editable Canva-importable file, no account connection.",
+      "status": "passed",
+      "observed": [
+        "Two student pages and one separate teacher key created as native editable PPTX shapes/text",
+        "All final pages rendered and visually reviewed; correct equal whole sizes, partitions and shaded amounts",
+        "Separate key and source/use notes retained",
+        "Actual PPTX and PDF previews; accurately labeled Canva import-ready, not a native Canva design"
+      ],
+      "production_status": "local_file_created",
+      "native_canva": "not performed",
+      "artifacts": [
+        {
+          "filename": "grade4-fractions-student-v2.pdf",
+          "sha256": "266cfd72cdcacd072359ce2f6ff2a85edcef50ddcca99427d266aacc5f657f51"
+        },
+        {
+          "filename": "grade4-fractions-student-v2.pptx",
+          "sha256": "2c82ef55251f7900a55d77f7377801e1a0abc49cdbb69bfdb2430b14ec256078"
+        },
+        {
+          "filename": "grade4-fractions-teacher-key-v2.pdf",
+          "sha256": "1825dba84b9177da979135188fdd331bdd4a2ed4e6f8c181718a0eb37d19fce6"
+        },
+        {
+          "filename": "grade4-fractions-teacher-key-v2.pptx",
+          "sha256": "55cb1e6ba0f90a4b37d6044d1ea734074a925a6ba5090ef6a7a72cba9fb3493b"
+        }
+      ]
+    },
+    {
+      "case": "W4",
+      "skills": [
+        "tw-behavior-pbis"
+      ],
+      "input": "Grade 4 return-from-recess routine; school Safe/Respectful/Responsible expectations; visual schedule and short oral chunks; no student devices/reward store.",
+      "status": "passed",
+      "observed": [
+        "Expectation matrix, daily routine instruction and exact teacher scripts",
+        "Supplied supports retained and counted as supported success",
+        "Private student reflection and separate teacher implementation/outcome record",
+        "WWC recommendations 1–3 strong and 6 moderate distinguished",
+        "One-week feasibility/access adjustments separated from WWC self-monitoring review horizon",
+        "Proposed six-minute/90-percent thresholds labeled as local decisions; no functional diagnosis or validated-effect claim"
+      ],
+      "finding": "Added explicit practice-specific review-duration and K–1 readiness guidance to the PBIS reference after inspecting the WWC full guide."
+    }
+  ],
+  "destination_tests_not_performed": [
+    "Native Google connection/create/readback/import",
+    "Native Canva connection/create/import/editability",
+    "Public plugin portal import/approval/publication"
+  ],
+  "limits": [
+    "These trials do not establish instructional effectiveness or universal host compatibility.",
+    "Skill folders were renamed by normal save reconciliation during testing; agents resumed from verified canonical locations.",
+    "Prior-release behavior cases were not rerun unless listed here."
+  ]
+}

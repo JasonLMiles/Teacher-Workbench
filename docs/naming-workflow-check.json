@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-15",
+  "input": {
+    "quiz_weight": 0.4,
+    "project_weight": 0.6,
+    "quizzes": [
+      [
+        8,
+        10
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        null,
+        10
+      ]
+    ],
+    "projects": [
+      [
+        45,
+        50
+      ]
+    ],
+    "aggregation": "points within category",
+    "rounding": "final percentage to two decimals"
+  },
+  "output": {
+    "missing_excluded": 88.67,
+    "missing_zero": 80.0,
+    "difference_percentage_points": 8.67
+  },
+  "skills_used": [
+    "tw-orchestrator",
+    "tw-grade-calculations"
+  ],
+  "calculator_executed": true,
+  "review_result": "passed"
+}

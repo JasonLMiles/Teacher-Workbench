@@ -1,0 +1,14 @@
+{
+  "mode": "raw",
+  "id_column": "anonymous_id",
+  "example_status": "synthetic",
+  "omitted_policy": "zero",
+  "invalid_policy": "error",
+  "blank_rule": "error",
+  "missing_tokens": {"omitted": "OM", "not_administered": "NA", "invalid": "INV"},
+  "items": {
+    "Q1": {"key": "B", "choices": ["A", "B", "C"]},
+    "Q2": {"key": "A", "choices": ["A", "B", "C"]},
+    "Q3": {"key": "C", "choices": ["A", "B", "C"]}
+  }
+}

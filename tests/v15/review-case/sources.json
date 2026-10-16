@@ -1,0 +1,200 @@
+{
+  "review_date": "2026-09-29",
+  "cutoff": "2026-09-29",
+  "search_scope": "Opened current CDE standards, direct mathematics framework PDF, CAST version 3.0 guidance/update page, CDE MTSS page, WWC recommendation pages and current publication index. This was a focused artifact review, not a systematic literature review.",
+  "access_limits": [
+    "CDE mathematics-framework and all-frameworks landing pages encountered redirect/bot-check errors on some retrievals; the official chapter 6 PDF was successfully opened and the relevant printed pages were read. No blocked page was treated as full-text verification.",
+    "No adopted curriculum, local pacing document, individual student support plan, or student work was supplied."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "California Content Standards: 3.MD.5.a",
+      "issuer": "California Department of Education",
+      "date_version": "Current CDE standards portal; publication date not displayed",
+      "url": "https://www2.cde.ca.gov/cacs/id/web/355",
+      "section": "Standard text and grade; web lines 21–36",
+      "supported_claim": "A unit square defines one square unit of area.",
+      "evidence_type": "Official student standard, not a research effect estimate",
+      "population_setting": "Grade 3 mathematics, California",
+      "limits": "Defines intended content; does not validate a task or measure a learner.",
+      "retrieval_refs": [
+        "turn203view0"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S2",
+      "title": "California Content Standards: 3.MD.7.b",
+      "issuer": "California Department of Education",
+      "date_version": "Current CDE standards portal; publication date not displayed",
+      "url": "https://www2.cde.ca.gov/cacs/id/web/359",
+      "section": "Standard text and grade; web lines 21–35",
+      "supported_claim": "Whole-number rectangle side lengths can be multiplied to find area; the corrected task samples this demand.",
+      "evidence_type": "Official student standard",
+      "population_setting": "Grade 3 mathematics, California",
+      "limits": "The short task does not cover all contexts or establish full-standard mastery.",
+      "retrieval_refs": [
+        "turn200view3"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S3",
+      "title": "California Content Standards: 3.MD.8",
+      "issuer": "California Department of Education",
+      "date_version": "Current CDE standards portal; publication date not displayed",
+      "url": "https://www2.cde.ca.gov/cacs/id/web/362",
+      "section": "Cluster and standard; web lines 21–35",
+      "supported_claim": "Perimeter is linear measure; the standard includes known-side perimeter and rectangles with the same area and different perimeters.",
+      "evidence_type": "Official student standard",
+      "population_setting": "Grade 3 mathematics, California",
+      "limits": "The initial ticket omits unknown-side problems and other portions of the standard.",
+      "retrieval_refs": [
+        "turn203view1"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S4",
+      "title": "2023 Mathematics Framework, Chapter 6: Mathematics—Investigating and Connecting, Transitional Kindergarten Through Grade Five",
+      "issuer": "California Department of Education",
+      "date_version": "2023 Mathematics Framework; current chapter PDF",
+      "url": "https://www.cde.ca.gov/ci/ma/cf/documents/mathframeworkch6.pdf",
+      "section": "Printed pp. 83–85; square tiles, linear perimeter, geometric volume",
+      "supported_claim": "Connect square coverage to rectangle area and contrast this with outside boundary length; geometric volume of rectangular prisms is discussed for grade 5.",
+      "evidence_type": "Official curriculum implementation framework",
+      "population_setting": "California TK–5; selected material concerns grades 3–5",
+      "limits": "Guidance supports the representation choice but does not establish efficacy of the authored exit ticket.",
+      "retrieval_refs": [
+        "turn206view0",
+        "turn207view0"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S5",
+      "title": "Use multiple media for communication, UDL Guidelines 3.0, consideration 5.1",
+      "issuer": "CAST",
+      "date_version": "2024, version 3.0; update page checked",
+      "url": "https://udlguidelines.cast.org/action-expression/expression-communication/multiple-media/",
+      "section": "Main guidance; web lines 149–165",
+      "supported_claim": "Vary expression modes when a specific medium is not integral to the goal.",
+      "evidence_type": "Design framework guidance",
+      "population_setting": "Learners with varied communication needs; general educational settings",
+      "limits": "Not a causal study or a claim that every specific adaptation preserves every construct; here the target is mathematics rather than handwriting.",
+      "retrieval_refs": [
+        "turn200view5",
+        "turn200view6"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S6",
+      "title": "Multi-Tiered System of Supports",
+      "issuer": "California Department of Education",
+      "date_version": "Page last reviewed 2026-06-25",
+      "url": "https://www.cde.ca.gov/ci//cr/ri/",
+      "section": "PBIS & RTI; web lines 285–290",
+      "supported_claim": "MTSS uses data, problem-solving teams, aligned supports, and continuous improvement.",
+      "evidence_type": "Official framework guidance",
+      "population_setting": "California school systems",
+      "limits": "Does not provide a one-question diagnostic or automatic tier-placement rule; this review is not a special-education eligibility or legal review.",
+      "retrieval_refs": [
+        "turn203view2"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S7",
+      "title": "Using Student Achievement Data to Support Instructional Decision Making",
+      "issuer": "IES / What Works Clearinghouse; Hamilton et al.",
+      "date_version": "September 2009",
+      "url": "https://ies.ed.gov/ncee/wwc/practiceguide/12",
+      "section": "Recommendation 1",
+      "supported_claim": "Use data in an ongoing instructional-improvement cycle.",
+      "evidence_type": "Practice guide; recommendation 1 rated Minimal Evidence",
+      "population_setting": "School educators; grade 3 is among the guide's listed grades",
+      "limits": "Does not prescribe this ticket, a mastery threshold, or the exact timing and decision rules authored here; not an ESSA tier or study-design rating.",
+      "retrieval_refs": [
+        "turn200view4"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S8",
+      "title": "Assisting Students Struggling with Mathematics: Intervention in the Elementary Grades",
+      "issuer": "IES / What Works Clearinghouse; Fuchs et al.",
+      "date_version": "March 2021",
+      "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/26",
+      "section": "Recommendations 2 (mathematical language) and 3 (representations)",
+      "supported_claim": "Clear mathematical language and well-chosen concrete/semi-concrete representations are supported intervention practices.",
+      "evidence_type": "Practice guide; recommendations 2 and 3 each rated Strong Evidence",
+      "population_setting": "Elementary mathematics intervention; listed grades K–6",
+      "limits": "The rating belongs to each recommendation, not to this brief authored lesson or assessment. No intervention dosage efficacy is claimed.",
+      "retrieval_refs": [
+        "turn204view1"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S9",
+      "title": "California Content Standards: 3.MD.2",
+      "issuer": "California Department of Education",
+      "date_version": "Current CDE standards portal; publication date not displayed",
+      "url": "https://www2.cde.ca.gov/cacs/id/web/352",
+      "section": "Cluster, standard, and footnote; web lines 21–37",
+      "supported_claim": "Grade 3 includes liquid-volume measurement and excludes geometric container volume in this standard.",
+      "evidence_type": "Official student standard",
+      "population_setting": "Grade 3 mathematics, California",
+      "limits": "The original word volume is underspecified; this source does not establish the class's intended next lesson or readiness.",
+      "retrieval_refs": [
+        "turn208view0"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S10",
+      "title": "California Content Standards: 3.MD.7.a",
+      "issuer": "California Department of Education",
+      "date_version": "Current CDE standards portal; publication date not displayed",
+      "url": "https://www2.cde.ca.gov/cacs/id/web/358",
+      "section": "Standard text; web lines 21–36",
+      "supported_claim": "This demand includes tiling a rectangle and linking tile-based area to multiplication.",
+      "evidence_type": "Official student standard",
+      "population_setting": "Grade 3 mathematics, California",
+      "limits": "The initial corrected ticket allows multiple representations and so does not require all of this demand from every student.",
+      "retrieval_refs": [
+        "turn200view2"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    },
+    {
+      "id": "S11",
+      "title": "WWC Practice Guides index",
+      "issuer": "IES / What Works Clearinghouse",
+      "date_version": "Current index accessed 2026-09-29",
+      "url": "https://ies.ed.gov/ncee/wwc/practiceguides",
+      "section": "Chronological guide list",
+      "supported_claim": "The current guide index still lists the 2021 elementary mathematics intervention guide and 2009 data-use guide.",
+      "evidence_type": "Current publication index",
+      "population_setting": "Educational practice-guide catalog",
+      "limits": "Targeted update check only; not a systematic search of all new research.",
+      "retrieval_refs": [
+        "turn207view1"
+      ],
+      "verification_date": "2026-09-29",
+      "opened_and_content_checked": true
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "R1",
+    "url": "https://www2.cde.ca.gov/cacs/",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "CA Content Standards (CA Dept of Education)"
+  },
+  {
+    "id": "R2",
+    "url": "https://www.cde.ca.gov/ci/cr/cf/allfwks.asp",
+    "checked_on": "2026-09-29",
+    "status": "automated retrieval unavailable; authoritative entry point, not full-text verified",
+    "title": "Internal Error ()"
+  },
+  {
+    "id": "R3",
+    "url": "https://leginfo.legislature.ca.gov/faces/codesTOCSelected.xhtml?tocCode=EDC&tocTitle=+Education+Code+-+EDC",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "California Codes: Codes Tree - Education Code - EDC"
+  },
+  {
+    "id": "R4",
+    "url": "https://docs.ctc.ca.gov/Document/Download/30328",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "CALIFORNIA STANDARDS FOR THE TEACHING PROFESSION (CSTP) 2024"
+  },
+  {
+    "id": "R5",
+    "url": "https://ies.ed.gov/ncee/wwc/practiceguides",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "WWC | Practice Guides"
+  },
+  {
+    "id": "R6",
+    "url": "https://ies.ed.gov/ncee/wwc/essa",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "WWC | ESSA Tiers Of Evidence"
+  },
+  {
+    "id": "R7",
+    "url": "https://iste.org/standards/students",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ISTE | 1. Students"
+  },
+  {
+    "id": "R8",
+    "url": "https://iste.org/standards/educators",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ISTE | 2. Educators"
+  },
+  {
+    "id": "R9",
+    "url": "https://iste.org/standards/coaches",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ISTE | 4. Coaches"
+  },
+  {
+    "id": "R10",
+    "url": "https://iste.org/standards/education-leaders",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ISTE | 3. Education Leaders"
+  },
+  {
+    "id": "R11",
+    "url": "https://iste.org/standards/computational-thinking-competencies",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ISTE | Computational Thinking Competencies"
+  },
+  {
+    "id": "R12",
+    "url": "https://tpack.org/tpackrefs/archives/7661",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "TPACK References"
+  },
+  {
+    "id": "R13",
+    "url": "https://www.tripleeframework.com/about.html",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "About - Triple E Framework"
+  },
+  {
+    "id": "R14",
+    "url": "https://udlguidelines.cast.org/",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "CAST Universal Design for Learning Guidelines"
+  },
+  {
+    "id": "R15",
+    "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers?hub=83250",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "AI competency framework for teachers | UNESCO"
+  },
+  {
+    "id": "R16",
+    "url": "https://www.unesco.org/en/articles/ai-competency-framework-students?hub=66973",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "AI competency framework for students | UNESCO"
+  },
+  {
+    "id": "R17",
+    "url": "https://ai4k12.org/gradeband-progression-charts/",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Grade Band Progression Charts – AI4K12"
+  },
+  {
+    "id": "R18",
+    "url": "https://www.testingstandards.net/open-access-files.html",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Open Access Files - THE STANDARDS FOR EDUCATIONAL AND PSYCHOLOGICAL TESTING"
+  },
+  {
+    "id": "R19",
+    "url": "https://www.ets.org/research/policy_research_reports/publications/report/2002/hyek.html",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Classical Test Theory as a First-Order Item Response Theory: Application to True-Score Prediction From a Possibly Nonparallel Test"
+  },
+  {
+    "id": "R20",
+    "url": "https://www.ets.org/research/policy_research_reports/publications/report/2022/keql.html",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Alternative Methods for Item Parameter Estimation: From CTT to IRT"
+  },
+  {
+    "id": "R21",
+    "url": "https://www.ets.org/research/policy_research_reports/publications/chapter/2017/jyic.html",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Item Response Theory"
+  },
+  {
+    "id": "R22",
+    "url": "https://www.nature.com/articles/s41599-026-07019-z",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ChatGPT’s impact on student learning outcomes: a meta-analysis of 35 experimental studies | Humanities and Social Sciences Communications"
+  },
+  {
+    "id": "R23",
+    "url": "https://arxiv.org/abs/2410.03017",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "[2410.03017] Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise"
+  },
+  {
+    "id": "R24",
+    "url": "https://www.cde.ca.gov/sp/ml/documents/eldstndspublication14.pdf",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "ELD Standards Publication - Multilingual Learners (CA Dept of Education) "
+  },
+  {
+    "id": "R25",
+    "url": "https://www.cde.ca.gov/ci/rl/cf/documents/elaeldfwchapter5.pdf",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "2014 ELA/ELD Framework, Chapter 5 - Curriculum Frameworks (CA Dept of Education)"
+  },
+  {
+    "id": "R26",
+    "url": "https://www.cde.ca.gov/ci/rl/cf/documents/elaeldfwchapter6.pdf",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "2014 ELA/ELD Framework, Chapter 6 - Curriculum Frameworks (CA Dept of Education)"
+  },
+  {
+    "id": "R27",
+    "url": "https://www.cde.ca.gov/sp/ml/elroadmap.asp",
+    "checked_on": "2026-09-29",
+    "status": "automated retrieval unavailable; authoritative entry point, not full-text verified",
+    "title": "Internal Error ()"
+  },
+  {
+    "id": "R28",
+    "url": "https://ies.ed.gov/ncee/WWC/PracticeGuide/19",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "WWC | Teaching Academic Content and Literacy to English Learners in Elementary and Middle School"
+  },
+  {
+    "id": "R29",
+    "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/21",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "WWC | Foundational Skills to Support Reading for Understanding in Kindergarten Through 3rd Grade"
+  },
+  {
+    "id": "R30",
+    "url": "https://ies.ed.gov/ncee/wwc/practiceguide/29",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "WWC | Providing Reading Interventions for Students in Grades 4–9"
+  },
+  {
+    "id": "R31",
+    "url": "https://ncrge.uconn.edu/resources/",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Resources | National Center for Research on Gifted Education (2012-2028) | Funded by the Institute of Education Sciences, U.S. Department of Education PR/Award #R305C200012 and #R305C140018 | University of Connecticut"
+  },
+  {
+    "id": "R32",
+    "url": "https://ies.ed.gov/use-work/resource-library/resource/tooltoolkit/supporting-classroom-teachers-implementing-ies-practice-guide-teaching-academic-content-and-literacy",
+    "checked_on": "2026-09-29",
+    "status": "resolved to intended authoritative page or document",
+    "title": "Supporting Classroom Teachers with Implementing the IES Practice Guide Teaching Academic Content and Literacy to English Learners in Elementary and Middle Schools: Part 1 of 4 | IES"
+  }
+]

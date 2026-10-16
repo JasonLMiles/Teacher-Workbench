@@ -1,0 +1,159 @@
+{
+  "artifact": "../cases/check-to-review.md",
+  "reviewer": "Codex model review; no independent educator rater",
+  "review_date": "2026-09-29",
+  "scope": "Entire supplied six-line artifact, including both student prompts, key, scoring, placement, reporting, and next step. No actual student work or student plans supplied.",
+  "sets": [
+    "common",
+    "math",
+    "access_language",
+    "formative",
+    "intervention",
+    "grading"
+  ],
+  "excluded_sets": {
+    "ela": "No ELA text, reading, writing, or language standard is an intended score construct.",
+    "science": "No science instruction or NGSS alignment is claimed.",
+    "humanities": "No historical or humanities source interpretation is assigned.",
+    "rehearsal": "No teacher rehearsal, role-play, or simulated teacher dialogue is included; possible response patterns are diagnostic hypotheses, not a rehearsal."
+  },
+  "ratings": [
+    {
+      "id": "C1",
+      "status": "fail",
+      "locator": "check-to-review.md:L2–L5; target, items 1–2, teacher key",
+      "reason": "The stated target requires distinguishing area from perimeter, but students only answer an area question and a generic explanation; there is no direct perimeter or comparison prompt. The key rewards the opposite construct. The corrected version must elicit both quantities and meanings.",
+      "supporting_sources": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "C2",
+      "status": "fail",
+      "locator": "check-to-review.md:L3, L5; item 1 and teacher key",
+      "reason": "Independent recomputation gives area 3 × 5 = 15 square units (B); 3 + 5 + 3 + 5 = 16 is perimeter in units. The key C and its square-unit label are wrong.",
+      "supporting_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "C3",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; diagnosed disability and 80% mastery statements",
+      "reason": "The artifact asserts a diagnosed disability from one distractor and universal mastery from a class percentage, with no supporting diagnostic, student, or source evidence. These are presented as facts, not tentative hypotheses. No factual diagnosis may be inferred from this artifact.",
+      "supporting_sources": [
+        "S6"
+      ]
+    },
+    {
+      "id": "C4",
+      "status": "fail",
+      "locator": "check-to-review.md:L1–L6; complete resource",
+      "reason": "The two short prompts are present, but no administration timing is supplied. There is no usable response-based reteaching/recheck task, and the written-only scoring direction conflicts with a mode-flexible explanation. Missing content is a failure of the supplied packet, not a reason to exclude the criterion.",
+      "supporting_sources": []
+    },
+    {
+      "id": "C5",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; 80% class rule and omit-unanswered rule",
+      "reason": "A class percentage cannot establish each learner's knowledge, a single choice cannot establish broad mastery, and dropping unanswered papers conceals missing evidence. The answer considered evidence of mastery is also incorrect.",
+      "supporting_sources": []
+    },
+    {
+      "id": "C6",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; written-without-oral-assistance and disability/Tier 3 clauses",
+      "reason": "The blanket written-only rule introduces handwriting/oral-response demands beyond the math target and can exclude documented access supports; no supports exception is preserved. A single answer is used for harmful labeling and automatic placement.",
+      "supporting_sources": [
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "id": "M1",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; worked teacher explanation",
+      "reason": "The teacher explanation adds all side lengths and calls the result area in square units. Its operation and units do not match the intended mathematical quantity.",
+      "supporting_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "M2",
+      "status": "fail",
+      "locator": "check-to-review.md:L4–L5; explanation prompt and scoring",
+      "reason": "Drawing/description is a useful opening for reasoning, but the wrong key, restriction on oral assistance, and absent accepted-strategy criteria prevent defensible reasoning about interior square coverage and boundary length from being credited consistently.",
+      "supporting_sources": [
+        "S4"
+      ]
+    },
+    {
+      "id": "A1",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; full-credit condition",
+      "reason": "The policy bars oral assistance without distinguishing direction reading, scribing, a student's own oral explanation, and answer-giving hints. It does not preserve required accommodations or disclose how support affects the construct.",
+      "supporting_sources": [
+        "S5"
+      ]
+    },
+    {
+      "id": "A2",
+      "status": "not_applicable",
+      "locator": "check-to-review.md:L1–L6",
+      "reason": "No designated language-development objective or language scaffold is claimed, and no learner language profile requires a particular model/frame. This optional language-support criterion is inapplicable to the original; the broader oral-access problem is rated under A1 and C6.",
+      "supporting_sources": []
+    },
+    {
+      "id": "F1",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; distractor A diagnosis and missing-paper instruction",
+      "reason": "The same answer can have multiple causes, but A is assigned a disability label without checking strategy. Blank and ambiguous responses receive no access check or follow-up.",
+      "supporting_sources": []
+    },
+    {
+      "id": "F2",
+      "status": "fail",
+      "locator": "check-to-review.md:L6; next step",
+      "reason": "Moving to volume is not tied to actual response evidence and no second task checks whether area/perimeter confusion is resolved. The word volume is ambiguous, so it is not rejected merely as a supposedly impossible grade 3 topic.",
+      "supporting_sources": [
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "id": "I1",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; must enter Tier 3",
+      "reason": "A single distractor response is used to declare both cause and required support intensity; there is no documented target-gap history, corroboration, or team decision.",
+      "supporting_sources": [
+        "S6"
+      ]
+    },
+    {
+      "id": "I2",
+      "status": "fail",
+      "locator": "check-to-review.md:L5–L6; placement rule and next step",
+      "reason": "Despite directing Tier 3 placement, the resource has no accurate intervention model, bounded scaffold decisions, monitoring check, or regrouping plan.",
+      "supporting_sources": []
+    },
+    {
+      "id": "G1",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; key, full-credit rule, 80% rule, missing-paper instruction",
+      "reason": "Credit rests on an incorrect key and a response-mode restriction unrelated to the target. There is no reproducible scoring rule for the explanation or an explicit denominator; omitting unanswered papers obscures coverage.",
+      "supporting_sources": []
+    },
+    {
+      "id": "G2",
+      "status": "fail",
+      "locator": "check-to-review.md:L5; everyone has mastered area",
+      "reason": "The class rollup is substituted for individual evidence, support conditions are disregarded, and missing responses are erased. The interpretation exceeds what this brief task can establish.",
+      "supporting_sources": []
+    }
+  ]
+}

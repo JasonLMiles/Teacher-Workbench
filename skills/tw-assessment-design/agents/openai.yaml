@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Assessment Design"
+  short_description: "Design aligned tasks, tests, keys, and rubrics"
+  default_prompt: "Use $tw-assessment-design to help me with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

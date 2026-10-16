@@ -1,0 +1,16 @@
+{
+  "release": "1.5.0",
+  "date": "2026-09-29",
+  "skills": 45,
+  "saved_operations_verified": 11,
+  "canonical_and_export_checks": "passed",
+  "structural_checks": "passed",
+  "local_links_checked": 266,
+  "helper_tests": 20,
+  "fresh_context_cases": 3,
+  "guide_pages": 25,
+  "all_guide_pages_visually_reviewed": true,
+  "live_learning_commons_authentication": "not_performed",
+  "live_schedule_activation": "not_performed",
+  "public_publication": "not_submitted"
+}

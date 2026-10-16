@@ -1,0 +1,20 @@
+{
+  "artifact": "REPLACE_WITH_ACTUAL_ARTIFACT",
+  "reviewer": "REPLACE_WITH_REVIEWER",
+  "sets": [
+    "common",
+    "math",
+    "formative"
+  ],
+  "excluded_sets": {
+    "ela": "Example concerns mathematics only."
+  },
+  "ratings": [
+    {
+      "id": "C1",
+      "status": "insufficient_evidence",
+      "locator": "No artifact supplied in this schema example",
+      "reason": "Replace this example with actual reviewed artifact evidence."
+    }
+  ]
+}

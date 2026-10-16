@@ -1,0 +1,2 @@
+{"labels":["Standard"],"properties":{"identifier":"synthetic-a","statementCode":"SYN.3.A","jurisdiction":"California","description":"Synthetic fixture, not a real standard.","gradeLevel":["3"],"license":"synthetic test fixture"}}
+{"labels":["Standard"],"properties":{"identifier":"synthetic-b","statementCode":"SYN.3.A","jurisdiction":"Other","description":"Different synthetic record."}}

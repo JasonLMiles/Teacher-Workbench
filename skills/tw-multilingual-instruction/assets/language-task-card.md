@@ -1,0 +1,10 @@
+# Language task card
+**Learning purpose:** [Meaningful content question.]
+**Language purpose:** [What learners will do with language.]
+**Model:** [Short original example with the target language feature visible.]
+**Useful words and meanings:** [A small purposeful set; clarify false cognates or technical uses if relevant.]
+**Optional language support:** [Frame/stem/organizer; include a route to an independent response.]
+**Partner routine:** [Purpose, roles, turns, feedback, and an individual response.]
+**Challenge:** [Greater precision, qualification, counterevidence, or authentic audience.]
+**Exit response:** [Prompt that reveals the learning.]
+**Teacher note:** [Separate content/language evidence, scaffolds to adjust, proposed-material status, citations.]

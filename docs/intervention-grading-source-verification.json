@@ -1,0 +1,114 @@
+[
+  {
+    "id": "G1",
+    "title": "CDE MTSS definition",
+    "url": "https://www.cde.ca.gov/ci/cr/ri/mtsscomprti2.asp",
+    "checked_at": "2026-09-29",
+    "status": "Full relevant definition and comparison read."
+  },
+  {
+    "id": "G2",
+    "title": "MTSS Center tier descriptions",
+    "url": "https://mtss4success.org/essential-components/multi-level-prevention-system",
+    "checked_at": "2026-09-29",
+    "status": "Full tier descriptions read; support continuum distinguished from placement."
+  },
+  {
+    "id": "G3",
+    "title": "NCII DBI",
+    "url": "https://intensiveintervention.org/data-based-individualization",
+    "checked_at": "2026-09-29",
+    "status": "Process and intended uses read."
+  },
+  {
+    "id": "G4",
+    "title": "NCII intensity taxonomy",
+    "url": "https://intensiveintervention.org/implementation-intervention/taxonomy-intervention-intensity",
+    "checked_at": "2026-09-29",
+    "status": "Dimensions and adaptation role read."
+  },
+  {
+    "id": "G5",
+    "title": "NCII progress monitoring",
+    "url": "https://intensiveintervention.org/data-based-individualization/progress-monitoring",
+    "checked_at": "2026-09-29",
+    "status": "Measure/goal/frequency, graphing and adaptation cycle read."
+  },
+  {
+    "id": "G6",
+    "title": "WWC practice guides",
+    "url": "https://ies.ed.gov/ncee/wwc/practiceguides",
+    "checked_at": "2026-09-29",
+    "status": "Official directory; use topic-specific recommendations at runtime."
+  },
+  {
+    "id": "G7",
+    "title": "Krathwohl 2002 original overview",
+    "url": "https://www.chemnet.edu.au/sites/default/files/files/Blooms_taxonomy_2002_Krathwohl.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Primary seven-page article read; knowledge/process dimensions and overlapping hierarchy checked."
+  },
+  {
+    "id": "G8",
+    "title": "Larsen et al. 2022 original research",
+    "url": "https://escholarship.org/content/qt9087k9x2/qt9087k9x2.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Primary article retrieved; framework assumptions require context-specific appraisal."
+  },
+  {
+    "id": "G9",
+    "title": "Marzano Resources scale reproducible",
+    "url": "https://soltreemrls3.s3-us-west-2.amazonaws.com/marzanoresources.com/media/documents/reproducibles/HDUPSC/proficiencyscalewithsampleactivities.pdf",
+    "checked_at": "2026-09-29",
+    "status": "Four-page official publisher resource read; scale definitions and sample identified, not copied into package."
+  },
+  {
+    "id": "G10",
+    "title": "California Education Code 49066",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=49066",
+    "checked_at": "2026-09-29",
+    "status": "Current official subdivisions (a)–(c) read; no universal grading formula established."
+  },
+  {
+    "id": "G11",
+    "title": "WWC PARLO study review",
+    "url": "https://ies.ed.gov/ncee/WWC/Study/94417",
+    "checked_at": "2026-09-29",
+    "status": "April 2026 review read; Standards 4.1 with reservations, attrition, baseline equivalence, secondary mathematics scope retained."
+  },
+  {
+    "id": "G12",
+    "title": "Testing Standards open access",
+    "url": "https://www.testingstandards.net/open-access-files.html",
+    "checked_at": "2026-09-29",
+    "status": "Official entry point opened; relevant chapters must be read for substantive use."
+  },
+  {
+    "id": "G13",
+    "title": "NIST paired observations",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc311.htm",
+    "checked_at": "2026-09-29",
+    "status": "Paired-difference mean, SD and t formula read."
+  },
+  {
+    "id": "G14",
+    "title": "NIST difference intervals",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc312.htm",
+    "checked_at": "2026-09-29",
+    "status": "Paired t interval formula read; inclusion of zero is not treated as proof of equivalence."
+  },
+  {
+    "id": "G15",
+    "title": "Lakens 2013 effect-size methods",
+    "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2013.00863/full",
+    "checked_at": "2026-09-29",
+    "status": "Primary methods article read for paired versus independent standardizers and d_z/d_av."
+  },
+  {
+    "id": "G16",
+    "title": "WWC current handbooks",
+    "url": "https://ies.ed.gov/ncee/wwc/Handbooks",
+    "checked_at": "2026-09-29",
+    "status": "Current directory identifies Version 5.0; older study review versions kept explicit."
+  }
+]

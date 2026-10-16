@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench Pedagogical Review"
+  short_description: "Review teaching materials using evidence and clear criteria"
+  default_prompt: "Use $tw-pedagogical-review to help with this teaching task."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

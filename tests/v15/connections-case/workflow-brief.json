@@ -1,0 +1,33 @@
+{
+  "status": "template_not_scheduled",
+  "title": "Review supplied California SYN.3.A example",
+  "timezone": "America/Los_Angeles",
+  "start_local": "2026-10-02T15:30:00",
+  "weekdays": [
+    "FR"
+  ],
+  "count": 4,
+  "prompt": "Use $tw-learning-commons and $tw-recurring-workflows for one private weekly source review. This is a supplied-example review, not student progress monitoring. Read the authorized durable source designated for this run; the local nodes.jsonl path in the draft is a preview-only example and is not a valid cloud runtime source. If no durable source is configured or readable, return a dated access-needed report and stop.\n\nRecord the run date in America/Los_Angeles, source locator, file/version or checksum, dataset/release metadata if present, read coverage, and any access errors. Read every record in the small supplied source (or report bounded/partial coverage if the source has grown). Match statementCode exactly to SYN.3.A and jurisdiction exactly to California; preserve the complete raw matched record and its line or record locator. Never resolve the target by code alone. Flag zero or multiple exact matches.\n\nFor the supplied example, the expected match is identifier synthetic-a and the description explicitly says it is a synthetic fixture, not a real standard. Keep that distinction in every output; do not represent it as CDE-verified or as a live Learning Commons read. If the source changes to a genuine standard, verify the exact California framework, grade/course, edition and statement against CDE before using it for instructional alignment. Never send synthetic-a to a live prerequisite endpoint as though it were a returned real standard UUID.\n\nInspect only actual supplied relationship records and their schema. If prerequisite edges are available, retain their source/target IDs, relationship labels, direction, provenance and coverage; distinguish prerequisite relationships from similarity/alignment. If no relationship records/schema are provided, report prerequisites as unknown from this source. Do not infer prerequisites from the code, grade field, record order, shared labels, or another jurisdiction's record. Do not interpret missing edges as evidence of no prerequisites.\n\nCompare with the last successful review only if an authorized durable prior-run record can be read. Otherwise say no comparable baseline is available. Produce a dated draft containing: source status and coverage; exact match and provenance; retrieved prerequisite relationships or the explicit unknown finding; observed changes; unresolved access/data needs; and one next action for teacher review. With this fixture, the next action is to obtain the intended genuine standard/framework and a scoped relationship export or authorized read if actual prerequisite analysis is needed. Do not invent a learning objective, diagnostic, learner gap, grade, placement or student growth finding from this fixture.\n\nNo calendar exclusions were supplied. Apply only an explicit authorized exclusion list/calendar if one is later provided; do not infer school holidays. A skipped review does not add a fifth invocation. On unreadable, malformed, ambiguous or partial input, report the exact limit and retain the previous valid output. When supported, check the planned local date or host run ID in the authorized destination to reduce duplicate outputs; do not promise exactly-once delivery. Write only the private draft and minimal authorized run metadata (date/run ID, source version, coverage, output locator, status, unresolved issue). Do not send messages, publish, change grades, connect accounts, or alter schedules.",
+  "sources": [
+    {
+      "kind": "supplied_local_example",
+      "preview_path": "../cases/nodes.jsonl",
+      "preview_sha256": "5a9924068d6380b5871699e84eaf0272da5323a0f1a401290b5f234ffe60f61e",
+      "exact_match": {
+        "statementCode": "SYN.3.A",
+        "jurisdiction": "California"
+      },
+      "expected_example_identifier": "synthetic-a",
+      "durable_runtime_locator": null,
+      "runtime_source_ready": false,
+      "scope": "Two-node synthetic fixture; no supplied relationship records"
+    }
+  ],
+  "destination": "Proposed private task result; no live task or output destination has been created or verified",
+  "excluded_dates": [],
+  "calendar_status": "No school calendar or exclusions supplied; four weekly invocations are the draft cadence",
+  "activation_authorized": false,
+  "live_schedule_created": false,
+  "accounts_connected": false,
+  "persistent_run_state_ready": false
+}

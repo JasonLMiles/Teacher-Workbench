@@ -1,0 +1,14 @@
+{
+  "status": "template_not_scheduled",
+  "title": "Prepare weekly planning draft",
+  "timezone": "America/Los_Angeles",
+  "start_local": "2026-10-02T15:30:00",
+  "weekdays": [
+    "FR"
+  ],
+  "count": 4,
+  "prompt": "Use $tw-lesson-unit-planning to prepare a draft for the next instructional week from the teacher-designated curriculum. Read the current supplied unit and pacing sources. Cite the pages used; preserve the confirmed objectives and access supports. If the sources cannot be read, report what is missing and do not invent a plan based on unread material. Return the draft privately for teacher review.",
+  "sources": [],
+  "destination": "Private task result",
+  "excluded_dates": []
+}

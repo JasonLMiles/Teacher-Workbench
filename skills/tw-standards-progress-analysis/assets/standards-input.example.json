@@ -1,0 +1,100 @@
+{
+  "synthetic": true,
+  "policy": {
+    "method": "latest",
+    "window": 3,
+    "min_evidence": 2,
+    "scale_type": "ordinal",
+    "interval_assumption": false,
+    "levels": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "threshold": 3,
+    "as_of": "2026-09-28",
+    "stale_days": 30
+  },
+  "students": [
+    "A",
+    "B"
+  ],
+  "standards": [
+    "S1",
+    "S2"
+  ],
+  "records": [
+    {
+      "student_code": "A",
+      "standard_id": "S1",
+      "task_id": "t1",
+      "date": "2026-09-01",
+      "status": "observed",
+      "value": 1
+    },
+    {
+      "student_code": "A",
+      "standard_id": "S1",
+      "task_id": "t2",
+      "date": "2026-09-08",
+      "status": "observed",
+      "value": 2
+    },
+    {
+      "student_code": "A",
+      "standard_id": "S1",
+      "task_id": "t3",
+      "date": "2026-09-15",
+      "status": "observed",
+      "value": 3
+    },
+    {
+      "student_code": "A",
+      "standard_id": "S1",
+      "task_id": "t4",
+      "date": "2026-09-22",
+      "status": "missing",
+      "value": null
+    },
+    {
+      "student_code": "A",
+      "standard_id": "S2",
+      "task_id": "t5",
+      "date": "2026-09-15",
+      "status": "absent",
+      "value": null
+    },
+    {
+      "student_code": "B",
+      "standard_id": "S1",
+      "task_id": "t1",
+      "date": "2026-09-01",
+      "status": "observed",
+      "value": 3
+    },
+    {
+      "student_code": "B",
+      "standard_id": "S1",
+      "task_id": "t2",
+      "date": "2026-09-08",
+      "status": "observed",
+      "value": 3
+    }
+  ],
+  "rollups": [
+    {
+      "id": "Domain1",
+      "members": [
+        "S1",
+        "S2"
+      ],
+      "method": "proportion_meeting",
+      "min_coverage": 1,
+      "essential": [
+        "S2"
+      ]
+    }
+  ]
+}

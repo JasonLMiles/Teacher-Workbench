@@ -1,0 +1,13 @@
+interface:
+  display_name: "Teacher Workbench: tw-canva-production"
+  short_description: "Produce editable classroom resources in Canva"
+  default_prompt: "Use $tw-canva-production to create an editable Canva teaching resource from my lesson materials."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
