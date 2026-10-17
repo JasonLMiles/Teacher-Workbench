@@ -5,10 +5,16 @@ on:
     branches: [main]
     tags: ['v*']
   pull_request:
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       version:
-        description: Package version (leave blank to use skill-catalog.json)
+        description: Package version (leave blank to use the version tag or skill-catalog.json)
+        type: string
+        required: false
+      release_tag:
+        description: Optional existing tag to build and attach to its release (for example 0.1)
         type: string
         required: false
 
@@ -20,79 +26,141 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.value }}
+      release_tag: ${{ steps.source.outputs.release_tag }}
+      artifact: teacher-workbench-plugins-${{ steps.version.outputs.value }}-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - name: Check out repository
+      # Keep the current builder separate so manual runs can package older tags.
+      - name: Check out workflow tools
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          path: tooling
+          persist-credentials: false
+      - name: Select package source
+        id: source
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag || github.event.release.tag_name || (github.ref_type == 'tag' && github.ref_name) || '' }}
+        shell: bash
+        run: |
+          if [[ -n "$RELEASE_TAG" ]]; then
+            [[ "$RELEASE_TAG" != -* ]]
+            git check-ref-format "refs/tags/$RELEASE_TAG"
+            printf 'ref=refs/tags/%s\nrelease_tag=%s\n' "$RELEASE_TAG" "$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+          else
+            printf 'ref=%s\nrelease_tag=\n' "$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out package source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ steps.source.outputs.ref }}
+          path: source
           persist-credentials: false
       - name: Resolve package version
         id: version
         env:
-          REQUESTED_VERSION: ${{ github.ref_type == 'tag' && github.ref_name || inputs.version }}
+          REQUESTED_VERSION: ${{ inputs.version }}
+          RELEASE_TAG: ${{ steps.source.outputs.release_tag }}
         shell: bash
         run: |
           python3 - <<'PY'
           import json, os, re
           from pathlib import Path
-          version = (os.environ.get('REQUESTED_VERSION') or json.loads(Path('skill-catalog.json').read_text())['package_version']).removeprefix('v')
-          if not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)', version):
-              raise SystemExit('Package version must be MAJOR.MINOR.PATCH')
+          pattern = r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)'
+          requested = os.environ.get('REQUESTED_VERSION', '').removeprefix('v')
+          tag_version = os.environ.get('RELEASE_TAG', '').removeprefix('v')
+          catalog_version = json.loads(Path('source/skill-catalog.json').read_text())['package_version']
+          version = requested or (tag_version if re.fullmatch(pattern, tag_version) else catalog_version)
+          if not re.fullmatch(pattern, version) or any(int(n) > 65535 for n in version.split('.')):
+              raise SystemExit('Package version must be MAJOR.MINOR.PATCH, with each component at most 65535')
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
               output.write(f'value={version}\n')
           PY
-      - name: Build all five formats
+      - name: Build all five formats and platform bundles
         id: packages
-        uses: ./.github/actions/build-skill-plugins
+        uses: ./tooling/.github/actions/build-skill-plugins
         with:
-          source: .
-          config: plugin-bundles.yml
+          source: source
+          config: source/plugin-bundles.yml
           output: dist/skill-plugins
           targets: copilot,chatgpt,claude,gemini-app,gemini-cli
           version: ${{ steps.version.outputs.value }}
       - name: Test the packager
-        run: python -m unittest discover -s .github/actions/build-skill-plugins/tests -v
-      - name: Upload packages and installation guide
+        run: python -m unittest discover -s tooling/.github/actions/build-skill-plugins/tests -v
+      - name: Upload all packages and installation guide
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: teacher-workbench-plugins-${{ steps.version.outputs.value }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             dist/skill-plugins/archives/*.zip
+            dist/skill-plugins/platforms/*.zip
             dist/skill-plugins/build-report.json
             dist/skill-plugins/SHA256SUMS
             dist/skill-plugins/GEMINI-INSTALL.md
           if-no-files-found: error
           compression-level: 0
+      - name: Upload Copilot download
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          path: dist/skill-plugins/platforms/teacher-workbench-copilot-${{ steps.version.outputs.value }}-bundle.zip
+          archive: false
+          if-no-files-found: error
+      - name: Upload ChatGPT download
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          path: dist/skill-plugins/platforms/teacher-workbench-chatgpt-${{ steps.version.outputs.value }}-bundle.zip
+          archive: false
+          if-no-files-found: error
+      - name: Upload Claude download
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          path: dist/skill-plugins/platforms/teacher-workbench-claude-${{ steps.version.outputs.value }}-bundle.zip
+          archive: false
+          if-no-files-found: error
+      - name: Upload Gemini app download
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          path: dist/skill-plugins/platforms/teacher-workbench-gemini-app-${{ steps.version.outputs.value }}-bundle.zip
+          archive: false
+          if-no-files-found: error
+      - name: Upload Gemini CLI download
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          path: dist/skill-plugins/platforms/teacher-workbench-gemini-cli-${{ steps.version.outputs.value }}-bundle.zip
+          archive: false
+          if-no-files-found: error
 
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: needs.build.outputs.release_tag != '' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: teacher-workbench-release-${{ needs.build.outputs.release_tag }}
+      cancel-in-progress: false
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      # Publish the exact files that passed the build, without rebuilding them.
+      - name: Download verified packages
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
-          persist-credentials: false
-      # Rebuild the same tagged source to produce deterministic release assets.
-      - uses: ./.github/actions/build-skill-plugins
-        with:
-          source: .
-          config: plugin-bundles.yml
-          output: dist/skill-plugins
-          targets: copilot,chatgpt,claude,gemini-app,gemini-cli
-          version: ${{ needs.build.outputs.version }}
-      - name: Create draft release
+          name: ${{ needs.build.outputs.artifact }}
+          path: dist/skill-plugins
+      - name: Verify archive checksums
+        working-directory: dist/skill-plugins
+        run: sha256sum --check SHA256SUMS
+      - name: Attach release assets or create draft release
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ needs.build.outputs.release_tag }}
           RELEASE_REPOSITORY: ${{ github.repository }}
         shell: bash
         run: |
-          gh release create "$RELEASE_TAG" \
-            --repo "$RELEASE_REPOSITORY" \
-            --verify-tag --draft --generate-notes \
-            --title "Teacher Workbench plugins $RELEASE_TAG" \
-            dist/skill-plugins/archives/*.zip \
-            dist/skill-plugins/build-report.json \
-            dist/skill-plugins/SHA256SUMS \
-            dist/skill-plugins/GEMINI-INSTALL.md
+          assets=(dist/skill-plugins/platforms/*.zip dist/skill-plugins/archives/*.zip
+                  dist/skill-plugins/build-report.json dist/skill-plugins/SHA256SUMS
+                  dist/skill-plugins/GEMINI-INSTALL.md)
+          if gh release view "$RELEASE_TAG" --repo "$RELEASE_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" --repo "$RELEASE_REPOSITORY" --clobber "${assets[@]}"
+          else
+            gh release create "$RELEASE_TAG" --repo "$RELEASE_REPOSITORY" \
+              --verify-tag --draft --generate-notes \
+              --title "Teacher Workbench plugins $RELEASE_TAG" "${assets[@]}"
+          fi

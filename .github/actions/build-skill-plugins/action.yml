@@ -40,8 +40,14 @@ outputs:
     description: JSON array of absolute ZIP paths, including the two marketplace ZIPs when selected.
     value: ${{ steps.build.outputs.archives }}
   archive-count:
-    description: Number of generated ZIPs.
+    description: Number of installable and marketplace ZIPs, excluding platform download bundles.
     value: ${{ steps.build.outputs.archive-count }}
+  platform-archives:
+    description: JSON array of absolute platform download bundle ZIP paths.
+    value: ${{ steps.build.outputs.platform-archives }}
+  platform-archive-count:
+    description: Number of generated platform download bundles.
+    value: ${{ steps.build.outputs.platform-archive-count }}
   gemini-install-guide:
     description: Absolute path of GEMINI-INSTALL.md, or empty when neither Gemini target is selected.
     value: ${{ steps.build.outputs.gemini-install-guide }}

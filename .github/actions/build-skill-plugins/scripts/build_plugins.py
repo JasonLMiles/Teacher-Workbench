@@ -656,6 +656,53 @@ def write_gemini_guide(staging, packages):
     return "GEMINI-INSTALL.md"
 
 
+def write_platform_bundles(staging, catalog, report, license_blob):
+    """Group installable archives by their recorded target, without changing them."""
+    version = report["package_version"]
+    archive_index = {a["path"]: a for a in report["archives"]}
+    instructions = {
+        "copilot": "Install every Copilot plugin part in archives/ through your host's custom-app/plugin upload process.",
+        "chatgpt": "Use a plugin ZIP from archives/, or extract the marketplace ZIP for repository marketplace distribution.",
+        "claude": "Upload a plugin ZIP from archives/, or extract the marketplace ZIP for repository marketplace distribution.",
+        "gemini-app": "Upload the individual skill ZIPs in archives/ separately. Install the complete set when using the orchestrator. See GEMINI-INSTALL.md.",
+        "gemini-cli": "Extract the extension ZIP from archives/ into a folder containing gemini-extension.json and skills/, then install that folder with Gemini CLI. See GEMINI-INSTALL.md.",
+    }
+    bundles = []
+    for target in report["targets"]:
+        packages = [p for p in report["packages"] if p["target"] == target]
+        selected = {p["archive"] for p in packages}
+        if target in ("chatgpt", "claude"):
+            selected.add(f"archives/{catalog}-{target}-marketplace-{version}.zip")
+        archives = [archive_index[path] for path in sorted(selected)]
+        root = staging / "platform-contents" / target
+        for archive in archives:
+            write_blob(root / archive["path"], Blob((staging / archive["path"]).read_bytes()))
+        platform_report = {**report, "targets": [target], "packages": packages, "archives": archives,
+                           "install_sets": [s for s in report["install_sets"] if s["target"] == target],
+                           "portability_hints": [h for h in report["portability_hints"] if h["target"] == target],
+                           "gemini_install_guide": report["gemini_install_guide"] if target.startswith("gemini-") else None}
+        write_json(root / "build-report.json", platform_report)
+        write_blob(root / "SHA256SUMS", Blob("".join(f"{a['sha256']}  {a['path']}\n" for a in archives).encode()))
+        if license_blob:
+            write_blob(root / "license.md", license_blob)
+        if platform_report["gemini_install_guide"]:
+            write_gemini_guide(root, packages)
+        lines = [f"# {catalog} for {target}", "", f"Package version: {version}", "",
+                 "Extract this download bundle first. Install the appropriate ZIPs inside archives/; "
+                 "the outer bundle itself is not a host plugin or skill upload.", "", instructions[target], "",
+                 "## Included downloads", ""]
+        lines += [f"- [{PurePosixPath(a['path']).name}]({a['path']})" for a in archives]
+        lines += ["", "Review build-report.json for package membership and compatibility findings. "
+                  "SHA256SUMS verifies the inner ZIPs from this extracted directory.", ""]
+        write_blob(root / "README.md", Blob("\n".join(lines).encode()))
+        relative = f"platforms/{catalog}-{target}-{version}-bundle.zip"
+        bundles.append({"target": target, "path": relative,
+                        "sha256": deterministic_zip(root, staging / relative),
+                        "archives": [a["path"] for a in archives]})
+    shutil.rmtree(staging / "platform-contents")
+    return bundles
+
+
 def build(args):
     source, output, config_path = Path(args.source).resolve(), Path(args.output).resolve(), Path(args.config).resolve()
     if not source.is_dir() or not config_path.is_file():
@@ -794,7 +841,7 @@ def build(args):
             archives.append({"path": relative, "sha256": deterministic_zip(staging / target, staging / relative)})
         gemini_guide = write_gemini_guide(staging, packages)
         report = {
-            "builder_version": "0.2.1", "package_version": version, "targets": targets,
+            "builder_version": "0.3.0", "package_version": version, "targets": targets,
             "discovered_sources": len(inventory), "included_skills": len({(s.name, s.digest) for _, ss in bundles for s in ss}),
             "bundle_count": len(bundles), "packages": packages, "archives": archives,
             "unassigned_sources": unassigned, "warnings": sorted(set(warnings)), "portability_hints": portability, "install_sets": install_sets,
@@ -802,8 +849,10 @@ def build(args):
             "validation": {"scope": "Local structural and documented format checks; not complete vendor schema validation or host installation",
                            "runtime_tested": False, "connectors_generated": False},
         }
+        report["platform_archives"] = write_platform_bundles(staging, catalog, report, license_blob)
         write_json(staging / "build-report.json", report)
-        write_blob(staging / "SHA256SUMS", Blob("".join(f"{a['sha256']}  {a['path']}\n" for a in sorted(archives, key=lambda x: x["path"])).encode()))
+        all_archives = archives + report["platform_archives"]
+        write_blob(staging / "SHA256SUMS", Blob("".join(f"{a['sha256']}  {a['path']}\n" for a in sorted(all_archives, key=lambda x: x["path"])).encode()))
         output.mkdir(parents=True, exist_ok=True)
         shutil.copytree(staging, output, dirs_exist_ok=True)
     emit_outputs(output, report)
@@ -813,6 +862,8 @@ def build(args):
 def emit_outputs(output, report):
     outputs = {"output-directory": str(output), "report": str(output / "build-report.json"),
                "archives": json.dumps([str(output / a["path"]) for a in report["archives"]]),
+               "platform-archives": json.dumps([str(output / a["path"]) for a in report["platform_archives"]]),
+               "platform-archive-count": str(len(report["platform_archives"])),
                "archive-count": str(len(report["archives"])), "skill-count": str(report["included_skills"]),
                "gemini-install-guide": str(output / report["gemini_install_guide"]) if report["gemini_install_guide"] else ""}
     if os.environ.get("GITHUB_OUTPUT"):
@@ -822,7 +873,10 @@ def emit_outputs(output, report):
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         summary = ["## Skill plugin packages", "", "| Plugin | Target | Skills |", "|---|---|---|"]
         summary += [f"| {html.escape(p['plugin'])}{' / ' + p['skills'][0]['name'] if p['target'] == 'gemini-app' else ''} | {p['target']} | {len(p['skills'])} |" for p in report["packages"]]
-        summary += ["", f"Built {len(report['archives'])} ZIPs. See build-report.json for provenance and compatibility hints.",
+        summary += ["", "## Platform downloads", "", "Extract the bundle for your host, then install the ZIPs inside archives/.", "",
+                    "| Platform | Download bundle | Inner ZIPs |", "|---|---|---|"]
+        summary += [f"| {a['target']} | `{PurePosixPath(a['path']).name}` | {len(a['archives'])} |" for a in report["platform_archives"]]
+        summary += ["", f"Built {len(report['archives'])} package ZIPs and {len(report['platform_archives'])} platform bundles. See build-report.json for provenance and compatibility hints.",
                     "", "Validation covers local structure; target applications have not been exercised by this build."]
         if report["gemini_install_guide"]:
             summary += ["", "See GEMINI-INSTALL.md for Gemini app imports, dependencies, and CLI extension installation."]
@@ -830,7 +884,7 @@ def emit_outputs(output, report):
             summary += ["", f"Review {len(report['warnings'])} build warning(s) and {len(report['portability_hints'])} portability hint(s)."]
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as file:
             file.write("\n".join(summary) + "\n")
-    print(f"Built {len(report['archives'])} ZIPs from {report['included_skills']} distinct skills across {report['bundle_count']} bundle(s).")
+    print(f"Built {len(report['archives'])} package ZIPs and {len(report['platform_archives'])} platform bundles from {report['included_skills']} distinct skills across {report['bundle_count']} bundle(s).")
     print(f"Report: {output / 'build-report.json'}")
     for warning in report["warnings"]:
         print(f"WARNING: {warning}")

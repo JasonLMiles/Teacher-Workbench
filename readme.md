@@ -10,7 +10,7 @@ Version: **2.0.0** · Skill prefix: **`tw-`** · Start with **`tw-orchestrator`*
 
 ## Start here
 
-1. Download this branch with GitHub's **Code → Download ZIP**, then extract it, or clone it:
+1. Download the bundle for your AI platform from **[Releases](https://github.com/JasonLMiles/Teacher-Workbench/releases) → Assets**. See [Download a platform package](#download-a-platform-package) below for filenames and instructions. If you want to edit the source, use **Code → Download ZIP**, or clone the repository:
 
    ```sh
    git clone --branch main https://github.com/JasonLMiles/Teacher-Workbench.git
@@ -58,11 +58,34 @@ The coordinating skill selects relevant specialists; it does not run all 45 for 
 
 The source folders are authoritative. The ZIPs package those files for individual skill uploads. Appearance metadata in `agents/openai.yaml` is optional for other hosts. This source distribution does not require a plugin manifest. The retained creation specifications describe earlier packaging options; use this README and the platform guides for current setup.
 
+## Download a platform package
+
+1. Open **[Releases](https://github.com/JasonLMiles/Teacher-Workbench/releases)** and choose a release.
+2. Expand **Assets** and download the ZIP for your platform. For package version `2.0.0`, the names are:
+
+   | Platform | Download from Assets | Contents |
+   |---|---|---|
+   | Microsoft Copilot Cowork | `teacher-workbench-copilot-2.0.0-bundle.zip` | All three Copilot plugin parts |
+   | OpenAI ChatGPT / Work | `teacher-workbench-chatgpt-2.0.0-bundle.zip` | ChatGPT plugin and repository marketplace |
+   | Claude Cowork | `teacher-workbench-claude-2.0.0-bundle.zip` | Claude plugin and repository marketplace |
+   | Google Gemini app | `teacher-workbench-gemini-app-2.0.0-bundle.zip` | All 45 individual skill uploads |
+   | Google Gemini CLI | `teacher-workbench-gemini-cli-2.0.0-bundle.zip` | Gemini CLI extension |
+
+3. Extract the download and read its `README.md`. The installable ZIPs are in **`archives/`**. Install those inner packages using your platform's guide; the outer `-bundle.zip` groups the downloads and is not itself a plugin upload. Copilot needs all three parts; Gemini app imports one skill ZIP at a time.
+
+Each platform bundle includes its package report and checksums; Gemini bundles also include their installation guide. The individual plugin, skill, extension, and marketplace ZIPs remain available directly under release **Assets** as well. GitHub's automatically generated **Source code (zip)** and **Source code (tar.gz)** downloads contain repository source, not the generated platform packages.
+
+If a release only shows source-code downloads, its packages have not been attached yet. For the latest build, open **[Actions → Build skill plugins](https://github.com/JasonLMiles/Teacher-Workbench/actions/workflows/build-skill-plugins.yml)**, choose a successful run, and scroll to **Artifacts**. Download the named platform bundle, or the **teacher-workbench-plugins-…** artifact for all platforms together. GitHub requires sign-in for Actions artifact downloads, and those artifacts expire; published release assets are the intended distribution point.
+
 ## Generate plugin packages
 
-Open **[Actions → Build skill plugins](https://github.com/JasonLMiles/Teacher-Workbench/actions/workflows/build-skill-plugins.yml) → Run workflow**. Choose `main`, optionally enter a version, and run it. When it completes, open the run and download the **teacher-workbench-plugins-…** artifact.
+Open **[Actions → Build skill plugins](https://github.com/JasonLMiles/Teacher-Workbench/actions/workflows/build-skill-plugins.yml) → Run workflow**. Choose `main`, optionally enter a package version, and run it. Leave `release_tag` blank for an Actions-only build. The current 45 skills produce **five platform download bundles**, alongside 53 individual/plugin/marketplace ZIPs. Each platform bundle appears separately in the run's **Artifacts** list.
 
-The current 45 skills produce three Copilot packages, one ChatGPT plugin, one Claude plugin, one Gemini CLI extension, 45 Gemini app skill ZIPs, and two marketplace ZIPs. Resource subfolders and MIT license notices are included. Pushes to `main` rebuild automatically; `v*` tags also create a draft release. See [package generation and installation](docs/PLUGIN-PACKAGES.md) for the output names and setup steps.
+Pushes to `main` rebuild automatically. Pushing a `vMAJOR.MINOR.PATCH` tag creates a draft release with both the platform bundles and individual packages attached; publishing a release also runs the packaging workflow. Review a draft before publishing it.
+
+**To add packages to an existing release such as `0.1`:** run the workflow from `main`, enter `0.1` in **release_tag**, and leave **version** blank. The workflow uses the current packager with the exact source from that tag, then uploads the packages into that release's **Assets**. It preserves the release notes and published/draft status. Repeating the run replaces matching generated assets. A tag such as `0.1` uses the package version recorded in its `skill-catalog.json` (`2.0.0` for that release); the release tag and package filename can therefore differ.
+
+See [package generation and installation](docs/PLUGIN-PACKAGES.md) for additional setup and maintenance details.
 
 ## Requirements and practical limits
 

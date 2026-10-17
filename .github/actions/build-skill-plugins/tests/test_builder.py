@@ -456,8 +456,63 @@ class BuilderTests(unittest.TestCase):
         self.assertEqual(Path(outputs["gemini-install-guide"]).name, "GEMINI-INSTALL.md")
         self.assertTrue(Path(outputs["gemini-install-guide"]).is_file())
         self.assertEqual(len(json.loads(outputs["archives"])), 7)
+        self.assertEqual(outputs["platform-archive-count"], "5")
+        self.assertEqual(len(json.loads(outputs["platform-archives"])), 5)
+        self.assertTrue(all(Path(p).is_file() for p in json.loads(outputs["platform-archives"])))
         self.assertIn("gemini-app", summary.read_text())
         self.assertIn("gemini-cli", summary.read_text())
+
+    def test_platform_bundles_preserve_only_the_target_archives_and_checksums(self):
+        self.folder("deep/alpha", "alpha")
+        (self.root / "license.md").write_text("Collection license.\n", encoding="utf-8")
+        self.cfg["license_file"] = "license.md"
+        report = self.run_build(targets=",".join(builder.TARGETS))
+        self.assertEqual(len(report["archives"]), 7)
+        self.assertEqual([b["target"] for b in report["platform_archives"]], list(builder.TARGETS))
+        for bundle in report["platform_archives"]:
+            with self.subTest(target=bundle["target"]), zipfile.ZipFile(self.output / bundle["path"]) as z:
+                expected = {p["archive"] for p in report["packages"] if p["target"] == bundle["target"]}
+                if bundle["target"] in ("chatgpt", "claude"):
+                    expected.add(f"archives/test-catalog-{bundle['target']}-marketplace-1.2.3.zip")
+                self.assertEqual({n for n in z.namelist() if n.endswith('.zip')}, expected)
+                self.assertEqual(set(bundle["archives"]), expected)
+                self.assertEqual(z.read("license.md"), b"Collection license.\n")
+                details = json.loads(z.read("build-report.json"))
+                self.assertEqual(details["targets"], [bundle["target"]])
+                self.assertEqual({p["target"] for p in details["packages"]}, {bundle["target"]})
+                self.assertIn("outer bundle itself is not", z.read("README.md").decode())
+                self.assertEqual("GEMINI-INSTALL.md" in z.namelist(), bundle["target"].startswith("gemini-"))
+                for line in z.read("SHA256SUMS").decode().splitlines():
+                    digest, path = line.split("  ", 1)
+                    self.assertIn(path, expected)
+                    self.assertEqual(z.read(path), (self.output / path).read_bytes())
+                    self.assertEqual(builder.hashlib.sha256(z.read(path)).hexdigest(), digest)
+        checksums = dict(line.split("  ", 1)[::-1] for line in (self.output / "SHA256SUMS").read_text().splitlines())
+        self.assertEqual(len(checksums), 12)
+        for bundle in report["platform_archives"]:
+            self.assertEqual(checksums[bundle["path"]], builder.hashlib.sha256((self.output / bundle["path"]).read_bytes()).hexdigest())
+
+    def test_platform_bundles_cover_all_split_parts_and_only_selected_targets(self):
+        for i in range(45):
+            self.folder(f"deep/skill-{i:02d}", f"skill-{i:02d}")
+        report = self.run_build(targets="copilot")
+        self.assertEqual(len(report["platform_archives"]), 1)
+        bundle = report["platform_archives"][0]
+        self.assertEqual(len(bundle["archives"]), 3)
+        with zipfile.ZipFile(self.output / bundle["path"]) as z:
+            for path in bundle["archives"]:
+                with zipfile.ZipFile(io.BytesIO(z.read(path))) as inner:
+                    manifest = json.loads(inner.read("manifest.json"))
+                    self.assertLessEqual(len(manifest["agentSkills"]), 20)
+
+    def test_platform_bundles_are_reproducible(self):
+        self.folder("deep/alpha", "alpha")
+        first_output = self.root / "first"
+        first = self.run_build(targets=",".join(builder.TARGETS), output=str(first_output))
+        second = self.run_build(targets=",".join(builder.TARGETS), output=str(self.root / "second"))
+        self.assertEqual(first["platform_archives"], second["platform_archives"])
+        for bundle in first["platform_archives"]:
+            self.assertEqual((first_output / bundle["path"]).read_bytes(), (self.root / "second" / bundle["path"]).read_bytes())
 
 
 if __name__ == "__main__":

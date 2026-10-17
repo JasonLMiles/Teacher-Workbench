@@ -52,6 +52,7 @@ jobs:
           name: skill-plugins
           path: |
             dist/skill-plugins/archives/*.zip
+            dist/skill-plugins/platforms/*.zip
             dist/skill-plugins/build-report.json
             dist/skill-plugins/SHA256SUMS
             dist/skill-plugins/GEMINI-INSTALL.md
@@ -66,6 +67,12 @@ After publishing the action in its own repository, the same step can use `OWNER/
 Replace the installed action's `action.yml` and `scripts/build_plugins.py` with this version; `requirements.txt` is unchanged. Add `gemini-app,gemini-cli` to any explicit `targets:` value in your workflow. If you omit `targets`, both are now included by default. Add `dist/skill-plugins/GEMINI-INSTALL.md` to your artifact upload paths. Your existing bundle configuration continues to work; Gemini app resources must pass its additional checks below.
 
 `examples/existing-repo-workflow.yml` is a ready-to-copy workflow for the `.github/actions/build-skill-plugins/` installation. Copy it to `.github/workflows/build-skill-plugins.yml`. The root-layout workflow supplied in `.github/workflows/` continues to use `uses: ./`.
+
+## Platform download bundles
+
+Every selected target also receives one `platforms/<catalog>-<target>-<version>-bundle.zip`. A Copilot bundle contains every split part; ChatGPT and Claude bundles contain the plugin ZIPs and their marketplace ZIP; Gemini app bundles contain the individual skill uploads. Extract the outer bundle and install its inner archives. The original archives are preserved byte for byte. Each platform report filters packages, install sets, and portability hints to its own target.
+
+Include `platforms/*.zip` in artifact and release uploads. The Teacher Workbench workflow also exposes each platform bundle as a separate Actions artifact. Its release job attaches both the platform bundles and individual archives, with support for published releases and manual backfills through `release_tag`. See the [repository package guide](../../../docs/PLUGIN-PACKAGES.md).
 
 ## What recursive discovery means
 
@@ -185,7 +192,7 @@ Teacher Workbench's vendored builder adds an optional top-level `license_file` c
 
 `source`, `config`, and `output` resolve from the calling process's working directory, normally the checked-out repository root. Overlay and icon paths resolve relative to the configuration file. Package versions use a common `MAJOR.MINOR.PATCH` subset with components from 0 to 65535; prerelease labels are rejected.
 
-Outputs are `output-directory`, `report`, `archives` (a JSON array of absolute paths), `archive-count`, `skill-count`, and `gemini-install-guide` (empty when neither Gemini target is selected). GitHub also receives a job summary. The output directory must be absent or empty; rerunning locally requires a fresh output path or deliberate removal of the old build. The builder will not erase unrelated files.
+Outputs are `output-directory`, `report`, `archives` (a JSON array of absolute individual/marketplace ZIP paths), `archive-count`, `platform-archives` (a JSON array of absolute platform bundle ZIP paths), `platform-archive-count`, `skill-count`, and `gemini-install-guide` (empty when neither Gemini target is selected). The existing archive count excludes the new platform bundles, preserving its previous meaning. GitHub also receives a job summary. The output directory must be absent or empty; rerunning locally requires a fresh output path or deliberate removal of the old build. The builder will not erase unrelated files.
 
 | Generated path | Purpose |
 |---|---|
@@ -201,7 +208,8 @@ Outputs are `output-directory`, `report`, `archives` (a JSON array of absolute p
 | `GEMINI-INSTALL.md` | Generated import instructions, exact package names, and declared Gemini app dependencies |
 | `archives/<catalog>-<target>-marketplace-<version>.zip` | ChatGPT or Claude catalog plus all its plugin folders |
 | `build-report.json` | Sources, hashes, overrides, explicit Gemini app omissions/dependencies, warnings, split install sets, and compatibility hints |
-| `SHA256SUMS` | Checksums of the generated ZIPs; paths relative to the output directory |
+| `platforms/<catalog>-<target>-<version>-bundle.zip` | One download per selected target, containing that target’s original archives, a README, report, checksums, license when configured, and Gemini guidance when applicable |
+| `SHA256SUMS` | Checksums of individual ZIPs and platform bundles; paths relative to the output directory |
 
 ZIP ordering, timestamps, and permissions are normalized. Repeated builds with identical inputs and dependency/runtime versions produce identical ZIPs. ZIPs preserve dot-prefixed plugin metadata, avoiding artifact-upload hidden-file exclusions.
 

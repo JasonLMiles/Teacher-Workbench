@@ -7,13 +7,17 @@ The **Build skill plugins** GitHub Actions workflow packages the current source 
 1. Open [Actions → Build skill plugins](https://github.com/JasonLMiles/Teacher-Workbench/actions/workflows/build-skill-plugins.yml).
 2. Select **Run workflow**, choose `main`, and optionally enter a version such as `2.0.1`. Leave it blank to use `package_version` in `skill-catalog.json`.
 3. Wait for the build and packager tests to finish.
-4. Open the completed run and download its **teacher-workbench-plugins-…** artifact under **Artifacts**. Extract that download to get the individual packages, build report, checksums, and Gemini installation guide.
+4. Open the completed run and scroll to **Artifacts**. Download the `teacher-workbench-<platform>-<version>-bundle.zip` for your host, or choose **teacher-workbench-plugins-…** for all platforms. Extract a platform bundle to find its installation note, report, checksums, and installable ZIPs under `archives/`.
 
-The workflow also runs on pushes to `main`, pull requests, and `v*` tags. A version tag builds the same packages and creates a **draft** GitHub Release with the download assets attached. Review and publish that draft when ready. This repository's visibility controls who can access its runs and releases.
+The workflow also runs on pushes to `main`, pull requests, `v*` tags, and published releases. A version tag creates a **draft** GitHub Release if a release does not already exist. Both platform bundles and individual archives are attached under **Assets**. Existing releases receive updated matching assets without changes to their notes or publication status. The release job downloads the exact tested build and verifies its checksums before uploading it.
+
+To populate an older release, run the workflow from `main` and set **release_tag** to that release's tag, such as `0.1`. A separate checkout supplies the exact tagged skill source while the current workflow supplies the packager. Leave **version** blank to use a valid `MAJOR.MINOR.PATCH` tag, or otherwise the tagged `skill-catalog.json` version. An explicit **version** overrides that default. This also works for a tag that predates the updated workflow.
+
+For ordinary downloads, open [Releases](https://github.com/JasonLMiles/Teacher-Workbench/releases), select a release, expand **Assets**, and choose the platform bundle. The automatically generated source-code archives do not include build outputs. Actions downloads require a GitHub sign-in and are subject to artifact retention; releases are the intended distribution point.
 
 ## Packages produced
 
-For the current 45 skills and version `2.0.0`, the build creates 53 ZIPs:
+For the current 45 skills and version `2.0.0`, the build creates **53 individual/package/marketplace ZIPs plus five platform bundles**. The bundles are named `teacher-workbench-<target>-2.0.0-bundle.zip`, where `<target>` is `copilot`, `chatgpt`, `claude`, `gemini-app`, or `gemini-cli`. Each bundle contains only that platform’s packages. The inner installable downloads remain:
 
 | Target | Files | Installation |
 |---|---|---|
@@ -23,9 +27,9 @@ For the current 45 skills and version `2.0.0`, the build creates 53 ZIPs:
 | Gemini app | 45 `teacher-workbench--tw-<skill>-gemini-app-2.0.0.zip` files | **Customize → Skills → Upload**; one ZIP per skill |
 | Gemini CLI | `teacher-workbench-gemini-cli-2.0.0.zip` | Extract into `teacher-workbench/`, then run `gemini extensions install ./teacher-workbench` |
 
-Install the complete suite when using the full orchestrator. It still selects relevant specialists for each task. Copilot parts must be updated together because sorted membership can change as skills are added or removed. Each exported skill includes the repository's MIT license. A GitHub artifact is a download bundle; install the individual packages appropriate for your host.
+Install the complete suite when using the full orchestrator. It still selects relevant specialists for each task. Copilot parts must be updated together because sorted membership can change as skills are added or removed. Each exported skill includes the repository's MIT license. Extract a platform bundle first, then install the individual ZIPs under `archives/`. Do not upload the outer platform bundle into a host as a single plugin.
 
-`GEMINI-INSTALL.md` contains exact Gemini download names and instructions. `build-report.json` records selected sources, file hashes, package membership, validation warnings, and portability hints. `SHA256SUMS` records the archive checksums; its paths are relative to the builder output directory.
+`GEMINI-INSTALL.md` contains exact Gemini download names and instructions. `build-report.json` records selected sources, file hashes, package membership, validation warnings, and portability hints. `SHA256SUMS` records checksums for both individual archives and platform bundles; its paths are relative to the builder output directory. Each platform bundle also carries an inner `SHA256SUMS` whose paths match its own extracted contents.
 
 For one-command Gemini CLI installation from a GitHub URL, publish the extracted extension tree in a dedicated distribution repository with `gemini-extension.json` at the root. Use the local extracted-folder command above with this repository's mixed release assets.
 
@@ -33,7 +37,7 @@ For one-command Gemini CLI installation from a GitHub URL, publish the extracted
 
 - `plugin-bundles.yml` selects the source skills, publisher metadata, license, and target-specific options.
 - `.github/actions/build-skill-plugins/` contains the reusable builder and its tests.
-- `.github/workflows/build-skill-plugins.yml` connects the builder to Actions, artifacts, and tagged draft releases.
+- `.github/workflows/build-skill-plugins.yml` connects the builder to Actions, separate platform artifacts, and release assets.
 - The workflow's `targets` value is `copilot,chatgpt,claude,gemini-app,gemini-cli`. Remove a target to build only the formats you need.
 
 Edit skills under `skills/` and commit the change to rebuild the packages. The builder also handles additional nested source directories; skill names must remain unique within the bundle. It never executes the skill scripts while packaging. The [builder reference](../.github/actions/build-skill-plugins/README.md) documents selection patterns, target overlays, resource exclusions, and local execution.
